@@ -1,128 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--<link rel="icon" href="../../favicon.ico">-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!--<link rel="icon" href="../../favicon.ico">-->
 
-    <!-- room display links -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Interactive Room Display | Codrops</title>
-    <meta name="description" content="An experimental interactive room slideshow based on the prototype concept by Bilal Mechairia's Dribbble shot 'Spaces'" />
-    <meta name="keywords" content="room, slideshow, 3d, perspective, animation, css, javascript, web development" />
-    <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css" />
-    <link rel="stylesheet" type="text/css" href="css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <link rel="stylesheet" type="text/css" href="css/animations.css" />
-    <script src="js/modernizr-custom.js"></script>
+		<!-- room display links -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr-custom.js"></script>
 
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-7243260-2']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
+		<title>London</title>
 
-    <title>London</title>
+		<!--Greensock-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
-    <!--Greensock-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-
-    <!--CSS-->
-    <link href="london.css" rel="stylesheet">
-    
-    <style type="text/css">
+		<!--CSS-->
+		<link href="london.css" rel="stylesheet">
+		
+		<style type="text/css">
 
 
-    </style>
-  </head>
+		</style>
+	</head>
 
-  <body>
-    <div class="container">
-      <div class="storefront" id="store_1">
-        <div class="display">
-          DISPLAY
-          <div id="slideshow" class="slideshow">
-      <div class="slide">
-        <div class="scene">
-          <div class="views">
-            <div class="view">
-              <img class="view__img" src="img/bedroom/a.jpg" alt="Side" />
-              <div class="item item--horse">
-                <img class="item__img" src="img/bedroom/horse.jpg" alt="Horse" data-transform-z="60" />
-                <div class="item__info">
-                  <h3 class="item__title">Deco Horse</h3>
-                  <div class="item__price"><sup>$</sup>59</div>
-                  <button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
-                </div>
-                <button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
-              </div>
-            </div>
-            <div class="view view--rotate view--rotate-left">
-              <img class="view__img" src="img/bedroom/b.jpg" alt="Front" />
-              <div class="item item--blanket">
-                <img class="item__img" src="img/bedroom/blanket.jpg" alt="Blanket" data-transform-z="90" />
-                <div class="item__info">
-                  <h3 class="item__title">Blanket</h3>
-                  <div class="item__price"><sup>$</sup>129</div>
-                  <button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
-                </div>
-                <button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
-              </div>
-              <div class="item item--picture">
-                <img class="item__img" src="img/bedroom/picture.jpg" alt="Picture" data-transform-z="80" />
-                <div class="item__info">
-                  <h3 class="item__title">Golden Frame</h3>
-                  <div class="item__price"><sup>$</sup>39</div>
-                  <button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
-                </div>
-                <button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+	<body>
+		<div class="container">
+			<div class="storefront" id="store_1">
+				<div class="display">
+					DISPLAY
+					<div id="slideshow" class="slideshow">
+			<div class="slide">
+				<div class="scene">
+					<div class="views">
+						<div class="view">
+							<img class="view__img" src="img/bedroom/a.jpg" alt="Side" />
+							<div class="item item--horse">
+								<img class="item__img" src="img/bedroom/horse.jpg" alt="Horse" data-transform-z="60" />
+								<div class="item__info">
+									<h3 class="item__title">Deco Horse</h3>
+									<div class="item__price"><sup>$</sup>59</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+						</div>
+						<div class="view view--rotate view--rotate-left">
+							<img class="view__img" src="img/bedroom/b.jpg" alt="Front" />
+							<div class="item item--blanket">
+								<img class="item__img" src="img/bedroom/blanket.jpg" alt="Blanket" data-transform-z="90" />
+								<div class="item__info">
+									<h3 class="item__title">Blanket</h3>
+									<div class="item__price"><sup>$</sup>129</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+							<div class="item item--picture">
+								<img class="item__img" src="img/bedroom/picture.jpg" alt="Picture" data-transform-z="80" />
+								<div class="item__info">
+									<h3 class="item__title">Golden Frame</h3>
+									<div class="item__price"><sup>$</sup>39</div>
+									<button class="button button--buy"><i class="icon icon--shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+								</div>
+								<button class="button button--close"><i class="icon icon--close"></i><span class="text-hidden">Close</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      
-       <nav class="nav">
-        <a href="#" class="nav__item"><span class="text-hidden">The Master Bedroom</span></a>
-      </nav>
-      <div class="titles">
-        <h2 class="title">The Bedroom <span class="title__sub">Relax</span></h2>
-      </div>
-    </div><!-- /container -->
-    <script src="js/classie.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-    (function() {
-      var slideshow = new Slideshow(document.getElementById('slideshow'));
-    })();
-    </script>
+			
+			 <nav class="nav">
+				<a href="#" class="nav__item"><span class="text-hidden">The Master Bedroom</span></a>
+			</nav>
+			<div class="titles">
+				<h2 class="title">The Bedroom <span class="title__sub">Relax</span></h2>
+			</div>
+		</div><!-- /container -->
+
+
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+		(function() {
+			var slideshow = new Slideshow(document.getElementById('slideshow'));
+		})();
+		</script>
 
 <!-- For the demo ad only -->   
 <script src="http://tympanus.net/codrops/adpacks/demoad.js"></script>
 
-        </div>
-      </div>
-      <div class="storefront" id="store_2">
-        <div class="display">
-          DISPLAY
-        </div>
-      </div>
-    </div>
-  </body>
+				</div>
+			</div>
+			<div class="storefront" id="store_2">
+				<div class="display">
+					DISPLAY
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
 
