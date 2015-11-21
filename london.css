@@ -22,14 +22,16 @@ body{
 	height: 100%;
 	background-size: 100% auto;
 	background-position: bottom;
+	text-align:center;
 }
 .display{
 	position: relative;
 	top: 250px;
-	left:30%;
 	width: 600px;
 	height: 350px;
 	background-color: red;
+	top:50%; 
+	margin-top:-150px;
 }
 
 #store_1{
