@@ -1,0 +1,5 @@
+/* Slide animations */
+[class^="from-"], [class*=" from-"] {
+	opacity: 1;
+}
+
