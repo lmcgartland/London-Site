@@ -21,17 +21,20 @@ body{
 	background-image: url('res/prototype/storefront_template_2.jpg');
 	height: 100%;
 	background-size: 100% auto;
-	background-position: bottom;
+	background-position: center;
 	text-align:center;
 }
 .display{
 	position: relative;
-	top: 250px;
-	width: 600px;
-	height: 350px;
+	width: 50%;
+	height: 50%;
 	background-color: red;
 	top:50%; 
-	margin-top:-150px;
+	left:50%;
+	-ms-transform: translate(-50%,-50%); /* IE 9 */
+   	-webkit-transform: translate(-50%,-50%); /* Safari */
+    transform: translate(-50%,-50%);
+
 }
 
 #store_1{
