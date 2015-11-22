@@ -3,21 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<!--<link rel="icon" href="../../favicon.ico">-->
-		
+
 	<title>London</title>
 
 	<!--Javascript Libraries-->
 	<script src="js/jquery-1.11.3.js"></script>
 	<script src="js/greensock-js/src/uncompressed/TweenMax.js"></script>
 	<script src="js/greensock-js/src/uncompressed/jquery.gsap.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script type="text/javascript" src="js/jquery.interactive_bg.js"></script>
-	<script src="../file/js/modernizr.js"></script>
+	<script src="js/jquery.parallax.js"></script>
+	<script src="js/main.js"></script>
 
 
 	<!--CSS-->
@@ -27,32 +28,18 @@
 
 <body>
 	<div class="container">
-		<div class="display-container">
-		<div class="bg display" id="display-1">
-			<div class="bg display-item layer-0 item-test" data-transform-z="60">
-			</div>
-			<div class="bg display-item layer-1 item-test" >
-			</div>
-			<div class="bg display-item layer-2 item-test">
-			</div>
-			<!--<div class="display-item layer-3 item-test">
-			</div> -->
-			<div class="bg display-item layer-4 item-test" >
-			</div> 
-			<div class="bg display-item layer-5 item-test" >
-			</div>
-			<div class="bg display-item layer-6 item-test">
-			</div>
-			<div class="bg display-item layer-7 item-test">
-			</div>
-		</div>
+		<ul id="scene" class="scene">
+			<li class="layer" data-depth="0.1"><div class="bg display-item layer-7 item-test" ></div></li>
+			<li class="layer" data-depth="0.15">
+				<div class="bg display-item layer-4 item-test"></div>
+				<div class="bg display-item layer-5 item-test"></div>
+				<div class="bg display-item layer-6 item-test"></div>
+			</li>
+			<li class="layer" data-depth="0.2"><div class="bg display-item layer-2 item-test" ></div></li>
+			
+			
+		</ul>
 	</div>
-	<script src="js/main.js"></script>
-	<script>
-        (function() {
-			var slideshow = new Slideshow(document.getElementById('display-container'));
-		})();
-      </script>
 </body>
 </html>
 

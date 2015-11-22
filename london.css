@@ -1,20 +1,23 @@
-.display {
-position: relative;
-width: 1050px;
-height: 575px;
-display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-	flex-direction: column;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transition: -webkit-transform 0.1s;
-	transition: transform 0.1s;
-	pointer-events: auto;
-	-webkit-perspective: 1800px;
-	perspective: 1800px;
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 1050px;
+}
+
+.scene {
+	display: block;
+	width: 100%;
+}
+
+.layer {
+	position: absolute;
+	width: 1050px;
+	height: 575px;
 }
 
 .display-item {
@@ -22,12 +25,8 @@ display: -webkit-flex;
 }
 
 .item-test {
-position: absolute;	
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-pointer-events: none;
--webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-
+	position: absolute;	
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .layer-0 {
