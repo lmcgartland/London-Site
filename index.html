@@ -20,6 +20,9 @@
 	<script src="js/jquery-1.11.3.js"></script>
 	<script src="js/greensock-js/src/uncompressed/TweenMax.js"></script>
 	<script src="js/greensock-js/src/uncompressed/jquery.gsap.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery.interactive_bg.js"></script>
+	<script src="../file/js/modernizr.js"></script>
 
 
 	<!--CSS-->
@@ -29,15 +32,37 @@
 
 
 	</style>
+		
 </head>
 
 <body>
 	<div class="container">
-		<div class="display" id="display-1">
-			<div class="display-item layer-0 item-test">
+		<div class="display-container">
+		<div class="bg display" id="display-1">
+			<div class="bg display-item layer-0 item-test" data-transform-z="60">
+			</div>
+			<div class="bg display-item layer-1 item-test" >
+			</div>
+			<div class="bg display-item layer-2 item-test">
+			</div>
+			<!--<div class="display-item layer-3 item-test">
+			</div> -->
+			<div class="bg display-item layer-4 item-test" >
+			</div> 
+			<div class="bg display-item layer-5 item-test" >
+			</div>
+			<div class="bg display-item layer-6 item-test">
+			</div>
+			<div class="bg display-item layer-7 item-test">
 			</div>
 		</div>
 	</div>
+	<script src="js/main.js"></script>
+	<script>
+        (function() {
+			var slideshow = new Slideshow(document.getElementById('display-container'));
+		})();
+      </script>
 </body>
 </html>
 

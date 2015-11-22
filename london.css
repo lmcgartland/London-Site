@@ -1,15 +1,98 @@
 .display {
-
+position: relative;
+width: 1050px;
+height: 575px;
+display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 0.1s;
+	transition: transform 0.1s;
+	pointer-events: auto;
+	-webkit-perspective: 1800px;
+	perspective: 1800px;
 }
 
 .display-item {
 
 }
 
-.layer-0 {
+.item-test {
+position: absolute;	
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+pointer-events: none;
+-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 
 }
 
-.item-test {
-	
+.layer-0 {
+	background-image: url(img/display1/buildings-front.png);
+	width: 461px;
+	height: 377px;
+	background-size: 461px 377px;
+	top: 200px;
+	left: 50px;
+	z-index: 7;
+}
+
+.layer-1 {
+	background-image: url(img/display1/buildings-back.png);
+	width: 366px;
+	height: 274px;
+	background-size: 366px 274px;
+	bottom: 30px;
+	left: 140px;
+	z-index: 6;
+}
+
+.layer-2 {
+	background-image: url(img/display1/cars.png);
+	width: 132px;
+	height: 479px;
+	background-size: 132px 479px;
+	top: 153px;
+	left: 500px;
+	z-index: 5;
+}
+
+.layer-4 {
+	background-image: url(img/display1/oyster.png);
+	width: 354px;
+	height: 127px;
+	background-size: 354px 127px;
+	z-index: 3;
+	top: 180px;
+	left: 90px;
+}
+.layer-5 {
+	background-image: url(img/display1/oyster-symbol.png);
+	width: 79px;
+	height: 67px;
+	background-size: 79px 67px;
+	z-index: 2;
+	top: 530px;
+	left: 665px;
+}
+.layer-6 {
+	background-image: url(img/display1/transport-for-london.png);
+	width: 354px;
+	height: 32px;
+	background-size: 354px 32px;
+	z-index: 1;
+	top: 540px;
+	left: 120px;
+}
+.layer-7 {
+	background-image: url(img/display1/card.png);
+	width: 738px;
+	height: 467px;
+	background-size: 738px 467px;
+	z-index: 0;
+	top: 156px;
+	left: 54px;
 }
