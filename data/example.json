@@ -1,0 +1,87 @@
+[
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "media_0000_1.png",
+		"position" : {
+			"x" : 0,
+			"y" : 0
+		}
+		"size" : {
+			"width" : 1050,
+			"height" : 575
+		}
+	}
+	]
+},
+{
+	"depth" : 0.1,
+	"content" :
+	[
+	{
+		"filename" : "media_0001_2.png",
+		"position" : {
+			"x" : 293,
+			"y" : 331
+		}
+		"size" : {
+			"width" : 760,
+			"height" : 374
+		}
+	}
+	]
+},
+{
+	"depth" : 0.2,
+	"content" :
+	[
+	{
+		"filename" : "media_0002_3.png",
+		"position" : {
+			"x" : 0,
+			"y" : 0
+		}
+		"size" : {
+			"width" : 1050,
+			"height" : 575
+		}
+	}
+	]
+},
+{
+	"depth" : 0.3,
+	"content" :
+	[
+	{
+		"filename" : "media_0003_4.png",
+		"position" : {
+			"x" : 344,
+			"y" : -5
+		}
+		"size" : {
+			"width" : 696,
+			"height" : 294
+		}
+	}
+	]
+},
+{
+	"depth" : 0.4,
+	"content" :
+	[
+	{
+		"filename" : "media_0004_5.png",
+		"position" : {
+			"x" : 0,
+			"y" : 0
+		}
+		"size" : {
+			"width" : 1050,
+			"height" : 575
+		}
+	}
+	]
+}
+]
