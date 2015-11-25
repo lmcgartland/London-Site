@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ul {
 	margin: 0;
 	padding: 0;
@@ -13,6 +14,11 @@ ul {
 	display: block;
 	width: 100%;
 }
+=======
+body {
+	margin: 0;
+	padding: 0;
+>>>>>>> Stashed changes
 
 .layer {
 	position: absolute;
@@ -20,8 +26,64 @@ ul {
 	height: 575px;
 }
 
-.display-item {
+.storefront-stage {
+	width:100vw;
+	height: 100vh;
+	border: 1px solid blue;
+	overflow: scroll;
+}
 
+.storefront-wrapper {
+	position: relative;
+		-webkit-perspective: 50;
+	-webkit-transform-style: preseve-3d;
+}
+.storefront {
+	width: 1500px;
+	height: 1000px;
+	background: yellow;
+	position: relative;
+	 -webkit-transform-origin: bottom left;
+	 -webkit-transition: 0.4s;
+}
+
+
+/* cleafix */
+.storefront:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.display-wrapper {
+	position: absolute;
+	bottom: 100px;
+}
+
+.display-container {
+	float: left;
+/*	position: absolute;
+*/	
+width: 1000px;
+height: 500px;
+position: relative;
+padding-left: 10px;
+/*	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);*/
+/*	transform-origin:left top;
+*/
+}
+
+.display {
+	position: relative;
+	background-color: purple;
+	width: 100%;
+	height: 100%;
+}
+
+.display-item {
+	position: absolute;
 }
 
 .item-test {
@@ -49,6 +111,7 @@ ul {
 	z-index: 6;
 }
 
+<<<<<<< Updated upstream
 .layer-2 {
 	background-image: url(img/display1/cars.png);
 	width: 132px;
@@ -95,3 +158,8 @@ ul {
 	top: 156px;
 	left: 54px;
 }
+=======
+.item-test {
+
+}
+>>>>>>> Stashed changes
