@@ -15,6 +15,7 @@
 
 	<!--Javascript Libraries-->
 	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/jsrender.js"></script>
 	<script src="js/greensock-js/src/uncompressed/TweenMax.js"></script>
 	<script src="js/greensock-js/src/uncompressed/jquery.gsap.js"></script>
 	<script src="js/jquery.parallax.js"></script>
@@ -28,18 +29,38 @@
 
 <body>
 	<div class="container">
-		<ul id="scene" class="scene">
-			<li class="layer" data-depth="0.1"><div class="bg display-item layer-7 item-test" ></div></li>
-			<li class="layer" data-depth="0.15">
-				<div class="bg display-item layer-4 item-test"></div>
-				<div class="bg display-item layer-5 item-test"></div>
-				<div class="bg display-item layer-6 item-test"></div>
-			</li>
-			<li class="layer" data-depth="0.2"><div class="bg display-item layer-2 item-test" ></div></li>
-			
-			
-		</ul>
+		<ul id="scene" class="scene"></ul>
 	</div>
+
+<script id="layerTemplate" type="text/x-jsrender">
+<li class="layer" data-depth="{{:depth}}">
+{{for content}}
+	<div class="layer-item" style="background-image: url(img/{{:filename}}); width: {{:size.width}}px; height: {{:size.height}}px; background-size: {{:size.width}}px {{:size.height}}px; top: {{:position.x}}px; left: {{:position.y}}px;"></div>
+{{/for}}
+</li>
+</script>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		var data;
+
+		$.getJSON('data/media_window_data.json', function(response){
+			data = response;
+		})
+		.success(function() { 
+			var template = $.templates("#layerTemplate");
+			var htmlOutput = template.render(data);
+			$("#scene").html(htmlOutput);
+
+			$('#scene').parallax({
+				relativeInput: true,
+				clipRelativeInput: true,
+				invertY: true
+			});
+		});
+	});
+</script>
+
 </body>
 </html>
 

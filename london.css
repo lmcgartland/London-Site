@@ -7,11 +7,18 @@ ul {
 	position: relative;
 	margin: 0 auto;
 	width: 1050px;
+	height: 575px;
+	border: 1px solid black;
 }
 
 .scene {
+	position: absolute;
 	display: block;
-	width: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	clip: rect(0px,1050px,575px,0px);
 }
 
 .layer {
@@ -20,11 +27,7 @@ ul {
 	height: 575px;
 }
 
-.display-item {
-
-}
-
-.item-test {
+.layer-item {
 	position: absolute;	
 	/*box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);*/
 }
