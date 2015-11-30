@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 jQuery(document).ready(function(){
 	/*$('.container').parallax({
 		calibrateX: false,
@@ -20,7 +19,7 @@ jQuery(document).ready(function(){
 		invertY: true
 	});
 });
-=======
+
 function getMousePos(e) {
 	var posx = 0;
 	var posy = 0;
@@ -112,4 +111,3 @@ $( "a.zoom" ).click(function() {
 });
 
 
->>>>>>> Stashed changes

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 ul {
 	margin: 0;
 	padding: 0;
@@ -14,11 +13,10 @@ ul {
 	display: block;
 	width: 100%;
 }
-=======
 body {
 	margin: 0;
 	padding: 0;
->>>>>>> Stashed changes
+}
 
 .layer {
 	position: absolute;
@@ -111,7 +109,6 @@ padding-left: 10px;
 	z-index: 6;
 }
 
-<<<<<<< Updated upstream
 .layer-2 {
 	background-image: url(img/display1/cars.png);
 	width: 132px;
@@ -158,8 +155,6 @@ padding-left: 10px;
 	top: 156px;
 	left: 54px;
 }
-=======
 .item-test {
 
 }
->>>>>>> Stashed changes
