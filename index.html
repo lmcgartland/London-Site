@@ -18,7 +18,7 @@
 	<script src="js/jsrender.js"></script>
 	<script src="js/greensock-js/src/uncompressed/TweenMax.js"></script>
 	<script src="js/greensock-js/src/uncompressed/jquery.gsap.js"></script>
-	<script src="js/jquery.parallax.js"></script>
+	<script src="js/jquery.parallax.js"></script>	
 	<script src="js/main.js"></script>
 
 
@@ -28,6 +28,7 @@
 </head>
 
 <body>
+	<div></div>
 	<div class="container">
 		<ul id="scene" class="scene"></ul>
 	</div>
@@ -50,9 +51,7 @@
 		.success(function() { 
 			var template = $.templates("#layerTemplate");
 			var htmlOutput = template.render(data);
-			$("#scene").html(htmlOutput);
-
-			$('#scene').parallax({
+			$("#scene").html(htmlOutput).parallax({
 				relativeInput: true,
 				clipRelativeInput: true,
 				invertY: true
