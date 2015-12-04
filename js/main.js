@@ -60,11 +60,11 @@ function Storefront(el) {
 Storefront.prototype._init = function() {
 
 
-	var storefrontWidth = ($('.display').width()+100) * $('.display').size() + 100;
+	var storefrontWidth = ($('.display').width()+100) * $('.display').size();//Took out the + 100 not sure why
 	console.log($('.display').width());
 
 	$('.storefront').width(storefrontWidth);
-
+	$('.storefront').offset({ top: -100 });
 	console.log($('.storefront').width());
 
 
