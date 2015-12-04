@@ -100,7 +100,7 @@ $( "a.zoom" ).click(function() {
 
 		TweenMax.to(".storefront", 0.4, {
            z: -100,
-           y: 200,
+           y: 0,
 			ease: Quad.easeInOut
         });
 
