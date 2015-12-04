@@ -1,0 +1,70 @@
+[
+{
+	"depth" : 0.4,
+	"content" :
+	[
+	{
+		"filename" : "FashionWindow_0003_bottom.png",
+		"position" : {
+			"x" : -1.0,
+			"y" : -4.0
+		},
+		"size" : {
+			"width" : 1050.0,
+			"height" : 575.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.3,
+	"content" :
+	[
+	{
+		"filename" : "FashionWindow_0002_mid-bottom.png",
+		"position" : {
+			"x" : -1.0,
+			"y" : 463.5
+		},
+		"size" : {
+			"width" : 1050.0,
+			"height" : 111.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.2,
+	"content" :
+	[
+	{
+		"filename" : "FashionWindow_0001_mid-top.png",
+		"position" : {
+			"x" : -56.0,
+			"y" : -160.0
+		},
+		"size" : {
+			"width" : 1050.0,
+			"height" : 575.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.1,
+	"content" :
+	[
+	{
+		"filename" : "FashionWindow_0000_top.png",
+		"position" : {
+			"x" : 130.5,
+			"y" : 246.0
+		},
+		"size" : {
+			"width" : 737.5,
+			"height" : 320.5
+		}
+	}
+	]
+}
+]
