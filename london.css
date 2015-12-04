@@ -29,12 +29,14 @@ body {
 	height: 100vh;
 	border: 1px solid blue;
 	overflow: scroll;
+	overflow-y: hidden;
 }
 
 .storefront-wrapper {
 	position: relative;
 		-webkit-perspective: 50;
 	-webkit-transform-style: preseve-3d;
+	overflow-y: hidden;
 }
 .storefront {
 	width: 1500px;
@@ -43,6 +45,7 @@ body {
 	position: relative;
 	 -webkit-transform-origin: bottom left;
 	 -webkit-transition: 0.4s;
+
 }
 
 
