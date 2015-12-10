@@ -44,6 +44,18 @@
 			
 			
 		</ul> -->
+		<div class="overlay" id="ov-1">
+			<div class="overlay-content" id="oc-1">
+				<p> This is a nother test </p>
+			</div>
+
+			<div class="overlay-content" id="oc-2">
+				<p> This is a third test </p>
+			</div>
+
+			<p> This is a best </p>
+
+			</div>
 
 		<a href="#" class="zoom" style="position:absolute;z-index:100;">Zoom</a>
 		<div class="storefront-stage">
@@ -63,6 +75,7 @@
 							<div class="display" id="display-2">
 								<div class="display-item item-test">
 									1
+
 								</div>
 							</div>
 						</div>
@@ -86,6 +99,8 @@
 					</div>
 				</div>
 			</div>
+
+
 		</div>
 
 		<script src="js/main.js"></script>
@@ -93,6 +108,21 @@
 			(function() {
 				var storefront = new Storefront($('.storefront'));
 			})();
+
+			$(document).ready(function(){
+    			$("#display-1").click(function(){
+       				 $("#ov-1").animate({"margin-top": "0vh"});
+       				 $("#oc-1").animate({"visibility": "visible"});
+    			});
+    			$("#display-2").click(function(){
+       				 $("#ov-1").animate({"margin-top": "0vh"});
+       				 $("#oc-2").animate({"visibility": "visible"});
+    			});
+    			$("#ov-1").click(function(){
+        			 $("#ov-1").animate({"margin-top": "100vh"});
+        			 $(".overlay-content").animate({"visibility": "hidden"});
+    			});
+			});
 		</script>
 	</body>
 	</html>
