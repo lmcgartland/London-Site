@@ -55,7 +55,7 @@
 
 			<p> This is a best </p>
 
-			</div>
+		</div>
 
 		<a href="#" class="zoom" style="position:absolute;z-index:100;">Zoom</a>
 		<div class="storefront-stage">
@@ -66,7 +66,37 @@
 						<div class="display-container">
 							<div class="display" id="display-1">
 								<div class="display-item item-test">
-									0
+									<ul id="scene" class="scene">
+										<li class="layer" data-depth="0.4" style="position: relative; display: block; left: 0px; top: 0px;">
+
+											<div class="layer-item" style="background-image: url(img/media_0004_5.png); width: 1049.5px; height: 575px; background-size: 1049.5px 575px; top: 0px; left: 0px;"></div>
+
+										</li>
+
+										<li class="layer" data-depth="0.3" style="position: absolute; display: block; left: 0px; top: 0px;">
+
+											<div class="layer-item" style="background-image: url(img/media_0003_4.png); width: 696px; height: 294px; background-size: 696px 294px; top: 172px; left: -2.5px;"></div>
+
+										</li>
+
+										<li class="layer" data-depth="0.2" style="position: absolute; display: block; left: 0px; top: 0px;">
+
+											<div class="layer-item" style="background-image: url(img/media_0002_3.png); width: 1050px; height: 575px; background-size: 1050px 575px; top: 0px; left: 0px;"></div>
+
+										</li>
+
+										<li class="layer" data-depth="0.1" style="position: absolute; display: block; left: 0px; top: 0px;">
+
+											<div class="layer-item" style="background-image: url(img/media_0001_2.png); width: 760px; height: 374px; background-size: 760px 374px; top: 146.5px; left: 165.5px;"></div>
+
+										</li>
+
+										<li class="layer" data-depth="0" style="position: absolute; display: block; left: 0px; top: 0px;">
+
+											<div class="layer-item" style="background-image: url(img/media_0000_1.png); width: 1050px; height: 575px; background-size: 1050px 575px; top: 0px; left: 0px;"></div>
+
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -102,28 +132,29 @@
 
 
 		</div>
+	</div>
 
-		<script src="js/main.js"></script>
-		<script>
-			(function() {
-				var storefront = new Storefront($('.storefront'));
-			})();
+	<script src="js/main.js"></script>
+	<script>
+		(function() {
+			var storefront = new Storefront($('.storefront'));
+		})();
 
-			$(document).ready(function(){
-    			$("#display-1").click(function(){
-       				 $("#ov-1").animate({"margin-top": "0vh"});
-       				 $("#oc-1").animate({"visibility": "visible"});
-    			});
-    			$("#display-2").click(function(){
-       				 $("#ov-1").animate({"margin-top": "0vh"});
-       				 $("#oc-2").animate({"visibility": "visible"});
-    			});
-    			$("#ov-1").click(function(){
-        			 $("#ov-1").animate({"margin-top": "100vh"});
-        			 $(".overlay-content").animate({"visibility": "hidden"});
-    			});
+		$(document).ready(function(){
+			$("#display-1").click(function(){
+				$("#ov-1").animate({"margin-top": "0vh"});
+				$("#oc-1").animate({"visibility": "visible"});
 			});
-		</script>
-	</body>
-	</html>
+			$("#display-2").click(function(){
+				$("#ov-1").animate({"margin-top": "0vh"});
+				$("#oc-2").animate({"visibility": "visible"});
+			});
+			$("#ov-1").click(function(){
+				$("#ov-1").animate({"margin-top": "100vh"});
+				$(".overlay-content").animate({"visibility": "hidden"});
+			});
+		});
+	</script>
+</body>
+</html>
 

@@ -66,8 +66,8 @@ body {
 	float: left;
 /*	position: absolute;
 */	
-width: 1000px;
-height: 500px;
+width: 1050px;
+height: 575px;
 position: relative;
 padding-left: 10px;
 /*	top:50%;
@@ -85,12 +85,11 @@ padding-left: 10px;
 }
 
 .display-item {
-	position: absolute;
+	position: relative;
 }
 
-.item-test {
-	position: absolute;	
-	/*box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);*/
+.layer-item {
+	position: absolute;
 }
 
 .layer-0 {
@@ -158,9 +157,6 @@ padding-left: 10px;
 	z-index: 0;
 	top: 156px;
 	left: 54px;
-}
-.item-test {
-
 }
 
 .overlay {
