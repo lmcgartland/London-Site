@@ -55,75 +55,90 @@
 
 			<p> This is a best </p>
 
-			</div>
-
-		<a href="#" class="zoom" style="position:absolute;z-index:100;">Zoom</a>
-		<div class="storefront-stage">
-			<div class="storefront-wrapper">
-
-				<div class="storefront">
-					<div class="display-wrapper">
-						<div class="display-container">
-							<div class="display" id="display-1">
-								<div class="display-item item-test">
-									0
-								</div>
-							</div>
-						</div>
-
-						<div class="display-container">
-							<div class="display" id="display-2">
-								<div class="display-item item-test">
-									1
-
-								</div>
-							</div>
-						</div>
-
-						<div class="display-container">
-							<div class="display" id="display-3">
-								<div class="display-item item-test">
-									1
-								</div>
-							</div>
-						</div>
-
-						<div class="display-container">
-							<div class="display" id="display-4">
-								<div class="display-item item-test">
-									1
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-
 		</div>
 
-		<script src="js/main.js"></script>
-		<script>
-			(function() {
-				var storefront = new Storefront($('.storefront'));
-			})();
+		<a href="#" class="zoom" style="position:absolute;z-index:100;">Zoom</a>
+		<a href="#" class="next paging-control" style="position:absolute;z-index:100;bottom:0;right:0;">Next</a>
+		<a href="#" class="prev paging-control" style="position:absolute;z-index:100;bottom:0;left:0;">Prev</a>
 
-			$(document).ready(function(){
-    			$("#display-1").click(function(){
-       				 $("#ov-1").animate({"margin-top": "0vh"});
-       				 $("#oc-1").animate({"visibility": "visible"});
-    			});
-    			$("#display-2").click(function(){
-       				 $("#ov-1").animate({"margin-top": "0vh"});
-       				 $("#oc-2").animate({"visibility": "visible"});
-    			});
-    			$("#ov-1").click(function(){
-        			 $("#ov-1").animate({"margin-top": "100vh"});
-        			 $(".overlay-content").animate({"visibility": "hidden"});
-    			});
+		<div class="paging-indicator">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 56" style="enable-background:new 0 0 500 56;" xml:space="preserve">
+				<line class="indicator-line" x1="44.7" y1="29.2" x2="455.3" y2="29.2"/>
+				<g class="indicator-group">
+					<circle class="indicator" cx="44.7" cy="29.2" r="5.8"/>
+					<circle class="indicator" cx="81" cy="29.2" r="5.8"/>
+					<circle class="indicator" cx="121.8" cy="29.2" r="5.8"/>
+					<circle class="indicator" cx="452.1" cy="29.2" r="5.8"/>
+				</g>
+			</svg>
+
+		</div>
+	<div class="storefront-stage">
+		<div class="storefront-wrapper">
+
+			<div class="storefront">
+				<div class="display-wrapper">
+					<div class="display-container">
+						<div class="display" id="display-1">
+							<div class="display-item item-test">
+								0
+							</div>
+						</div>
+					</div>
+
+					<div class="display-container">
+						<div class="display" id="display-2">
+							<div class="display-item item-test">
+								1
+
+							</div>
+						</div>
+					</div>
+
+					<div class="display-container">
+						<div class="display" id="display-3">
+							<div class="display-item item-test">
+								1
+							</div>
+						</div>
+					</div>
+
+					<div class="display-container">
+						<div class="display" id="display-4">
+							<div class="display-item item-test">
+								1
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<script src="js/main.js"></script>
+	<script>
+		(function() {
+			var storefront = new Storefront($('.storefront'));
+		})();
+
+		$(document).ready(function(){
+			$("#display-1").click(function(){
+				$("#ov-1").animate({"margin-top": "0vh"});
+				$("#oc-1").animate({"visibility": "visible"});
 			});
-		</script>
-	</body>
-	</html>
+			$("#display-2").click(function(){
+				$("#ov-1").animate({"margin-top": "0vh"});
+				$("#oc-2").animate({"visibility": "visible"});
+			});
+			$("#ov-1").click(function(){
+				$("#ov-1").animate({"margin-top": "100vh"});
+				$(".overlay-content").animate({"visibility": "hidden"});
+			});
+		});
+	</script>
+</body>
+</html>
 

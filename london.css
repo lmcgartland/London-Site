@@ -28,24 +28,26 @@ body {
 .storefront-stage {
 	width:100%;
 	height: 100vh;
-	border: 1px solid blue;
 	overflow: scroll;
 	overflow-y: hidden;
+	overflow-x: hidden;
+
 }
 
 .storefront-wrapper {
 	position: relative;
-		-webkit-perspective: 50;
+	-webkit-perspective: 50;
 	-webkit-transform-style: preseve-3d;
 	overflow-y: hidden;
+	overflow-x: hidden;
 }
 .storefront {
 	width: 1500px;
 	height: 1000px;
 	background: yellow;
 	position: relative;
-	 -webkit-transform-origin: bottom left;
-	 -webkit-transition: 0.4s;
+	-webkit-transform-origin: bottom left;
+	-webkit-transition: 0.4s;
 
 }
 
@@ -179,6 +181,36 @@ padding-left: 10px;
 	margin-top: 25vh;
 	margin-left: 25vw;
 	position: fixed;
+}
+
+.paging-indicator {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -250px;
+	width: 500px;
+	height: 56px;
+	z-index: 100;
+}
+
+.indicator-line {
+	fill:none;
+	stroke:#BE1E2D;
+	stroke-width:4;
+	stroke-miterlimit:10;
+}
+.indicator{
+	fill:#FFFFFF;
+	stroke:#000000;
+	stroke-width:4;
+	stroke-miterlimit:10;
+	cursor: pointer;
+}
+.indicator.active{
+	fill:#000000;
+	stroke:#FFFFFF;
+	stroke-width:4;
+	stroke-miterlimit:10;
 }
 
 #oc-1 {
