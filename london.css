@@ -86,6 +86,8 @@ padding-left: 10px;
 
 .display-item {
 	position: relative;
+	clip: rect(0px,1050px,575px,0px);
+	overflow: hidden;
 }
 
 .layer-item {
