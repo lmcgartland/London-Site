@@ -1,0 +1,240 @@
+[
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0013_0_background.png",
+		"position" : {
+			"x" : 0.0,
+			"y" : 0.0
+		},
+		"size" : {
+			"width" : 1050.0,
+			"height" : 575.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0012_0_computer.png",
+		"position" : {
+			"x" : 183.0,
+			"y" : 117.0
+		},
+		"size" : {
+			"width" : 381.0,
+			"height" : 122.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0011_0_postits.png",
+		"position" : {
+			"x" : 178.5,
+			"y" : 521.5
+		},
+		"size" : {
+			"width" : 183.5,
+			"height" : 123.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0010_0_computer_highlighted.png",
+		"position" : {
+			"x" : 154.0,
+			"y" : 88.5
+		},
+		"size" : {
+			"width" : 437.5,
+			"height" : 180.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0009_0_postits_highlighted.png",
+		"position" : {
+			"x" : 149.5,
+			"y" : 492.5
+		},
+		"size" : {
+			"width" : 241.5,
+			"height" : 181.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0008_1_sign.png",
+		"position" : {
+			"x" : 3.5,
+			"y" : 413.0
+		},
+		"size" : {
+			"width" : 248.0,
+			"height" : 147.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0007_1_sign_highlighted.png",
+		"position" : {
+			"x" : 0,
+			"y" : 384.0
+		},
+		"size" : {
+			"width" : 306.0,
+			"height" : 179.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0006_2_plant.png",
+		"position" : {
+			"x" : 167.5,
+			"y" : 86.0
+		},
+		"size" : {
+			"width" : 111.5,
+			"height" : 310.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0005_3_chair.png",
+		"position" : {
+			"x" : 263.0,
+			"y" : 217.0
+		},
+		"size" : {
+			"width" : 185.5,
+			"height" : 234.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0004_4_hand.png",
+		"position" : {
+			"x" : 199.5,
+			"y" : 685.0
+		},
+		"size" : {
+			"width" : 244.5,
+			"height" : 334.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0003_4_H.png",
+		"position" : {
+			"x" : 359.5,
+			"y" : 510.5
+		},
+		"size" : {
+			"width" : 128.5,
+			"height" : 168.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0002_4_lamp.png",
+		"position" : {
+			"x" : -2.0,
+			"y" : 659.5
+		},
+		"size" : {
+			"width" : 346.5,
+			"height" : 346.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0001_4_hand_highlighted.png",
+		"position" : {
+			"x" : 172.0,
+			"y" : 657.5
+		},
+		"size" : {
+			"width" : 300.5,
+			"height" : 391.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Product-Design_0000_4_H_highlighted.png",
+		"position" : {
+			"x" : 331.0,
+			"y" : 481.5
+		},
+		"size" : {
+			"width" : 186.5,
+			"height" : 225.5
+		}
+	}
+	]
+}
+]
