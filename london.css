@@ -1,4 +1,3 @@
-
 ul {
 	margin: 0;
 	padding: 0;
@@ -24,6 +23,7 @@ body {
 	position: absolute;
 	width: 1050px;
 	height: 575px;
+	pointer-events: none;
 }
 
 .storefront-stage {
@@ -135,6 +135,7 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 
 .layer-item {
 	position: absolute;
+	pointer-events: none;
 }
 
 .overlay {

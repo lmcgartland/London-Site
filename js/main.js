@@ -16,6 +16,7 @@ $("#display-2").click(function(){
 $("#ov-1").click(function(){
 	$("#ov-1").animate({"margin-top": "100vh"});
 	$(".overlay-content").animate({"visibility": "hidden"});
+
 });
 
 (function() {
@@ -46,15 +47,15 @@ $(window).on('resize', function(){
 
 
 function scaleWin() {
-	      var win = $(window); //this = window
+    var win = $(window); //this = window
 
-      if (win.width() > 1500) {
-      }
-      else if (win.width() < 750)  {
-      }
-      else {
-      $(".storefront-wrapper").css("transform","translateX(-50%) translateY(-48%) scale("+(win.width()/($(".storefront-wrapper").width()+438))+")");
-      }
+    if (win.width() > 1500) {
+    }
+    else if (win.width() < 750)  {
+    }
+    else {
+    	$(".storefront-wrapper").css("transform","translateX(-50%) translateY(-48%) scale("+(win.width()/($(".storefront-wrapper").width()+438))+")");
+    }
 }
 
 
@@ -70,6 +71,22 @@ Storefront.prototype._init = function() {
 	// toggleZoom();
 	advance(); // initial advance for setup
 	scaleWin();
+
+	$(".layer-item-highlighted").hide();
+
+	$(".layer-item[title]").css("pointer-events", "auto");
+
+	$(".layer-item[title]").hover(function() {
+		thisID = "#" + $(this).attr("id") + "_highlighted";
+		console.log("Item with overlay-content attr moused over. ID: " + thisID);
+		$(thisID).show();
+	}, function() {
+		thisID = "#" + $(this).attr("id") + "_highlighted";
+		console.log("Item with overlay-content attr moused out. ID: " + thisID);
+		$(thisID).hide();
+	});
+
+
 	/* Paging controls */
 
 	$( "a.next" ).click(function() {
