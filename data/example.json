@@ -30,6 +30,17 @@
 			"width" : 760,
 			"height" : 374
 		}
+		"hover" : {
+			"filename" : "something",
+			"position" : {
+				"x" : 293,
+				"y" : 331
+			},
+			"size" : {
+				"width" : 760,
+				"height" : 374
+			}
+		}
 	}
 	]
 },

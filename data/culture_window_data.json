@@ -1,0 +1,376 @@
+[
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0021_background.png",
+		"position" : {
+			"x" : 0.0,
+			"y" : 0.0
+		},
+		"size" : {
+			"width" : 1050.0,
+			"height" : 575.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0020_wheel.png",
+		"position" : {
+			"x" : 128.5,
+			"y" : 373.5
+		},
+		"size" : {
+			"width" : 319.0,
+			"height" : 374.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0019_worlds_end.png",
+		"position" : {
+			"x" : 113.0,
+			"y" : 291.5
+		},
+		"size" : {
+			"width" : 109.5,
+			"height" : 109.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0018_street_art.png",
+		"position" : {
+			"x" : 89.5,
+			"y" : 645.0
+		},
+		"size" : {
+			"width" : 107.5,
+			"height" : 107.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0017_shoreditch.png",
+		"position" : {
+			"x" : 338.0,
+			"y" : 676.5
+		},
+		"size" : {
+			"width" : 113.5,
+			"height" : 114.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0016_tea.png",
+		"position" : {
+			"x" : 438.0,
+			"y" : 565.0
+		},
+		"size" : {
+			"width" : 113.0,
+			"height" : 112.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0015_peter_pan.png",
+		"position" : {
+			"x" : 208.0,
+			"y" : 701.5
+		},
+		"size" : {
+			"width" : 114.5,
+			"height" : 114.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0014_camden.png",
+		"position" : {
+			"x" : 441.5,
+			"y" : 395.0
+		},
+		"size" : {
+			"width" : 113.0,
+			"height" : 113.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0013_bangers_mash.png",
+		"position" : {
+			"x" : 362.5,
+			"y" : 294.0
+		},
+		"size" : {
+			"width" : 106.0,
+			"height" : 106.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0012_nightlife.png",
+		"position" : {
+			"x" : 25.5,
+			"y" : 393.5
+		},
+		"size" : {
+			"width" : 110.5,
+			"height" : 110.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0011_greek_restaurant.png",
+		"position" : {
+			"x" : 241.5,
+			"y" : 253.0
+		},
+		"size" : {
+			"width" : 106.0,
+			"height" : 106.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0010_london_museums.png",
+		"position" : {
+			"x" : 15.5,
+			"y" : 531.0
+		},
+		"size" : {
+			"width" : 110.5,
+			"height" : 110.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0009_worlds_end_highlighted.png",
+		"position" : {
+			"x" : 93.0,
+			"y" : 271.5
+		},
+		"size" : {
+			"width" : 149.5,
+			"height" : 149.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0008_street_art_highlighted.png",
+		"position" : {
+			"x" : 69.5,
+			"y" : 625.0
+		},
+		"size" : {
+			"width" : 147.5,
+			"height" : 147.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0007_shoreditch_highlighted.png",
+		"position" : {
+			"x" : 318.0,
+			"y" : 656.5
+		},
+		"size" : {
+			"width" : 153.5,
+			"height" : 154.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0006_tea_highlighted.png",
+		"position" : {
+			"x" : 418.0,
+			"y" : 545.0
+		},
+		"size" : {
+			"width" : 152.5,
+			"height" : 152.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0005_peter_pan_highlighted.png",
+		"position" : {
+			"x" : 188.0,
+			"y" : 681.5
+		},
+		"size" : {
+			"width" : 154.5,
+			"height" : 154.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0004_camden_highlighted.png",
+		"position" : {
+			"x" : 421.5,
+			"y" : 375.0
+		},
+		"size" : {
+			"width" : 153.0,
+			"height" : 153.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0003_bangers_mash_highlighted.png",
+		"position" : {
+			"x" : 343.0,
+			"y" : 274.0
+		},
+		"size" : {
+			"width" : 146.0,
+			"height" : 146.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0002_nightlife_highlighted.png",
+		"position" : {
+			"x" : 5.5,
+			"y" : 373.5
+		},
+		"size" : {
+			"width" : 150.5,
+			"height" : 150.5
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0001_greek_restaurant_highlighted.png",
+		"position" : {
+			"x" : 222.0,
+			"y" : 233.0
+		},
+		"size" : {
+			"width" : 146.0,
+			"height" : 146.0
+		}
+	}
+	]
+},
+{
+	"depth" : 0.0,
+	"content" :
+	[
+	{
+		"filename" : "Culture_0000_london_museums.png",
+		"position" : {
+			"x" : -4.5,
+			"y" : 511.0
+		},
+		"size" : {
+			"width" : 150.5,
+			"height" : 146.0
+		}
+	}
+	]
+}
+]
