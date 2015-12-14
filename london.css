@@ -194,12 +194,14 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 .indicator:hover {
 		stroke:#fff;
 	fill:black;
+		stroke-width:3;
+
 
 }
 .indicator.active{
 	fill:#000000;
 	stroke:#FFFFFF;
-	stroke-width:4;
+	stroke-width:3;
 	stroke-miterlimit:10;
 }
 
@@ -210,6 +212,18 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 	height: 10%;
 	z-index: 100;
 	color: white;
+	font-family: "Futura";
+}
+
+.header-nav h2 {
+	text-transform: uppercase;
+	line-height: 1rem;
+}
+
+.header-nav h3 {
+	line-height: 1rem;
+	font-size: 1rem;
+	font-style: italic;
 }
 
 
@@ -227,6 +241,8 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 	height: 50px;
 	-webkit-transition: 0.2s;
 	color: white;
+		text-transform: uppercase;
+
 }
 
 .paging-control {
@@ -248,6 +264,7 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 	stroke-linejoin:round;
 	stroke-miterlimit:10;
 }
+
 
 .disabled {
 	opacity: 0;
@@ -283,5 +300,5 @@ left: 15px;
 	max-width: 200px;
 	font:12px sans-serif;
 	-webkit-transform-origin: top left;
-	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+	-webkit-box-shadow: 0px 0px 10px rgba(255,255,255,1);
 }

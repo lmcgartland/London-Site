@@ -50,7 +50,7 @@ function scaleWin() {
 
 
 
-$(".display").mouseenter( function(){
+$(".layer-item").mouseenter( function(){
 	var title = $(this).attr('title');
 
 	$(".tooltip").html(title);
@@ -141,6 +141,13 @@ Storefront.prototype._init = function() {
 
 		$("g.indicator-group circle:nth-child("+(storefront.lastDisplayIndex+1)+")").attr("class", "indicator");
 		$("g.indicator-group circle:nth-child("+(storefront.currentDisplayIndex+1)+")").attr("class", "indicator active");
+
+		var displayTitle = $(storefront.displays[storefront.currentDisplayIndex]).attr("title");
+		var displayCreds = $(storefront.displays[storefront.currentDisplayIndex]).attr("creds");
+
+		$("h2.display-title").html(displayTitle);
+		$("span.display-creds").html(displayCreds);
+
 
 		TweenMax.to(".storefront", 0.4, {
 			x: -$(storefront.displays[storefront.currentDisplayIndex]).width()*storefront.currentDisplayIndex, 
