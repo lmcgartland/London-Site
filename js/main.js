@@ -5,18 +5,6 @@ jQuery(document).ready(function(){
 		invertY: true
 	});*/
 
-$("#display-1").click(function(){
-	$("#ov-1").animate({"margin-top": "0vh"});
-	$("#oc-1").animate({"visibility": "visible"});
-});
-$("#display-2").click(function(){
-	$("#ov-1").animate({"margin-top": "0vh"});
-	$("#oc-2").animate({"visibility": "visible"});
-});
-$("#ov-1").click(function(){
-	$("#ov-1").animate({"margin-top": "100vh"});
-	$(".overlay-content").animate({"visibility": "hidden"});
-});
 
 (function() {
 	var storefront = new Storefront($('.storefront'));
@@ -56,6 +44,36 @@ function scaleWin() {
       $(".storefront-wrapper").css("transform","translateX(-50%) translateY(-48%) scale("+(win.width()/($(".storefront-wrapper").width()+438))+")");
       }
 }
+
+
+
+
+
+
+$(".display").mouseenter( function(){
+	var title = $(this).attr('title');
+
+	$(".tooltip").html(title);
+
+	TweenMax.to(".tooltip", 1, {
+		autoAlpha:1,
+		scale: 1,
+		ease: Elastic.easeOut
+	});
+
+} ).mouseleave( function(){
+	TweenMax.to(".tooltip", 0.2, {
+		autoAlpha:0,
+		scale: 0,
+		ease: Cubic.easeIn
+	});
+
+} ).mousemove(function(e) {
+	var mousex = e.pageX + 10; //Get X coordinates
+        var mousey = e.pageY + 10; //Get Y coordinates
+        $('.tooltip')
+        .css({ top: mousey, left: mousex })
+});
 
 
 

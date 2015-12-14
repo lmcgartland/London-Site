@@ -131,6 +131,7 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 	position: relative;
 	clip: rect(0px,1050px,575px,0px);
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .layer-item {
@@ -141,7 +142,7 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 	width: 100%;
 	height: 100%;
 	margin-top: 100vh;
-	background-color: rgba(100, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
 	z-index: 1;
 }
@@ -149,10 +150,11 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 .overlay-content {
 	width: 50%;
 	height: 50%;
-	
+	background-color: white;
 	margin-top: 25vh;
 	margin-left: 25vw;
 	position: fixed;
+	-webkit-border-radius: 10px;
 }
 
 
@@ -268,13 +270,18 @@ right:15px;
 .prev {
 left: 15px;
 }
-#oc-1 {
 
-	background-color: blue;
-	visibility: hidden;
-}
 
-#oc-2 {
-	background-color: green;
-	visibility: hidden;
+.tooltip {
+	position:absolute;
+	border:2px solid #fff;
+	background-color:#161616;
+	border-radius:10px;
+	padding:10px;
+	color:#fff;
+	z-index: 1000;
+	max-width: 200px;
+	font:12px sans-serif;
+	-webkit-transform-origin: top left;
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
 }
