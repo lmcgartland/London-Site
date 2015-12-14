@@ -50,7 +50,7 @@ function scaleWin() {
 
 
 $(".layer-item").mouseenter( function(){
-	var title = $(this).attr('title');
+	var title = $(this).attr('data-title');
 
 	$(".tooltip").html(title);
 
@@ -90,9 +90,9 @@ Storefront.prototype._init = function() {
 
 	$(".layer-item-highlighted").hide();
 
-	$(".layer-item[title]").css("pointer-events", "auto");
+	$(".layer-item[data-title]").css("pointer-events", "auto");
 
-	$(".layer-item[title]").hover(function() {
+	$(".layer-item[data-title]").hover(function() {
 		thisID = "#" + $(this).attr("id") + "_highlighted";
 		console.log("Item with overlay-content attr moused over. ID: " + thisID);
 		$(thisID).show();
@@ -157,7 +157,7 @@ Storefront.prototype._init = function() {
 		$("g.indicator-group circle:nth-child("+(storefront.lastDisplayIndex+1)+")").attr("class", "indicator");
 		$("g.indicator-group circle:nth-child("+(storefront.currentDisplayIndex+1)+")").attr("class", "indicator active");
 
-		var displayTitle = $(storefront.displays[storefront.currentDisplayIndex]).attr("title");
+		var displayTitle = $(storefront.displays[storefront.currentDisplayIndex]).attr("data-title");
 		var displayCreds = $(storefront.displays[storefront.currentDisplayIndex]).attr("creds");
 
 		$("h2.display-title").html(displayTitle);
