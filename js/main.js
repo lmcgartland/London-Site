@@ -65,23 +65,20 @@ Storefront.prototype._init = function() {
 
 	var storefrontWidth = ($('.display').width()+100) * $('.display').length;//Took out the + 100 not sure why
 
-	$('.storefront').width(storefrontWidth);
-	$('.storefront').offset({ top: -100 });
+	// $('.storefront').width(storefrontWidth);
+	// $('.storefront').offset({ top: -100 });
 
+	// toggleZoom();
 	advance(); // initial advance for setup
 
 	/* Paging controls */
 
 	$( "a.next" ).click(function() {
-		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
-		if(storefront.currentDisplayIndex < storefront.displays.length-1) storefront.currentDisplayIndex++;
-		advance();
+		goNext();
 	});
 
 	$( "a.prev" ).click(function() {
-		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
-		if(storefront.currentDisplayIndex > 0) storefront.currentDisplayIndex--;
-		advance();
+		goPrev();
 	});
 
 	$( "g.indicator-group circle" ).click(function() {
@@ -90,6 +87,33 @@ Storefront.prototype._init = function() {
 		advance();
 	});
 
+	$("body").keydown(function(e) {
+	  if(e.keyCode == 37) { // left
+	  	goPrev();
+	  }
+	  else if(e.keyCode == 39) { // right
+	  	goNext();
+	  }
+	  else if(e.keyCode == 32) { // space`
+	  	toggleZoom();
+	  }
+	});
+
+	$( "a.zoom" ).click(function() {
+		toggleZoom();
+	});
+
+	function goPrev() {
+		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
+		if(storefront.currentDisplayIndex > 0) storefront.currentDisplayIndex--;
+		advance();
+	}	
+
+	function goNext() {
+		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
+		if(storefront.currentDisplayIndex < storefront.displays.length-1) storefront.currentDisplayIndex++;
+		advance();
+	}	
 
 	function advance() {
 		console.log("Advancing to slide "+(storefront.currentDisplayIndex+1)+" of "+storefront.displays.length);
@@ -103,18 +127,13 @@ Storefront.prototype._init = function() {
 		});
 	}
 
-};
+	function toggleZoom() {
+		var scrollLeft = $('.storefront-stage').scrollLeft() / $('.storefront').width();
+		console.log('bottom ' + $('.storefront-stage').scrollLeft() / $('.storefront').width());
 
 
 
-
-$( "a.zoom" ).click(function() {
-	var scrollLeft = $('.storefront-stage').scrollLeft() / $('.storefront').width();
-	console.log('bottom ' + $('.storefront-stage').scrollLeft() / $('.storefront').width());
-
-
-
-	if(zoomed) {
+		if(zoomed) {
 		// $('.storefront').css({transform: 'translateZ(-100px)'});
 		// console.log($('.storefront-stage').scrollLeft());
 		// $('.storefront-wrapper').css({height: '200'});
@@ -145,7 +164,12 @@ $( "a.zoom" ).click(function() {
 		zoomed = true;
 
 	}
+}
 
-});
+};
+
+
+
+
 
 
