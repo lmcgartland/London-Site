@@ -1,9 +1,9 @@
 jQuery(document).ready(function(){
-	$('#scene').parallax({
+	/*$('#scene').parallax({
 		relativeInput: true,
 		clipRelativeInput: true,
 		invertY: true
-	});
+	});*/
 
 	$("#display-1").click(function(){
 		$("#ov-1").animate({"margin-top": "0vh"});
