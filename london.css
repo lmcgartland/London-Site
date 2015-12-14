@@ -119,7 +119,7 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 
 .display {
 	position: relative;
-	background-color: purple;
+	background-color: black;
 	width: 100%;
 	height: 100%;
 	padding: 0;
