@@ -46,6 +46,7 @@ ul {
 .scene {
 	display: block;
 	width: 100%;
+	pointer-events: auto;
 }
 body {
 	margin: 0;
