@@ -266,6 +266,15 @@ Storefront.prototype._init = function() {
 		$("g.indicator-group circle:nth-child("+(storefront.lastDisplayIndex+1)+")").attr("class", "indicator");
 		$("g.indicator-group circle:nth-child("+(storefront.currentDisplayIndex+1)+")").attr("class", "indicator active");
 
+		/* setup parallax */
+		$(storefront.displays[storefront.lastDisplayIndex]).find("ul").parallax().parallax('disable');
+		$(storefront.displays[storefront.currentDisplayIndex]).find("ul").parallax({
+			relativeInput: true,
+			clipRelativeInput: true,
+			invertY: true
+		});
+		$(storefront.displays[storefront.currentDisplayIndex]).find("ul").parallax().parallax('enable');
+
 		var displayTitle = $(storefront.displays[storefront.currentDisplayIndex]).attr("data-title");
 		var displayCreds = $(storefront.displays[storefront.currentDisplayIndex]).attr("creds");
 
