@@ -22,6 +22,7 @@ ul {
     -webkit-transform: translateX(-50%) translateY(-50%);
     -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
     width: 450px;
+    cursor: pointer;
 }
 .welcome-card img {
 	width: 100%;
@@ -258,12 +259,18 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 	line-height: 1rem;
 	font-size: 1rem;
 	font-style: italic;
+
+}
+
+.header-nav h3 span {
+	color: #BE1E2D;
 }
 
 
 
 .header-nav {
 	text-align: center;
+	text-shadow: 0px 2px 2px black;
 }
 
 .menu {

@@ -32,6 +32,7 @@ $(window).load(function(){
 		autoAlpha:1,
 		x: -1000,
 		y: -500,
+		rotation: -50,
 		ease: Cubic.easeOut
 	}, {
 		autoAlpha:1,
@@ -46,6 +47,7 @@ $(window).load(function(){
 		autoAlpha:1,
 		x: 1000,
 		y: -500,
+		rotation: 30,
 		ease: Cubic.easeOut
 	}, {
 		autoAlpha:1,
@@ -59,12 +61,32 @@ $(window).load(function(){
 });
 
 	$(".welcome-card").click(function() {
-		TweenMax.fromTo(".intro", 0.9, {
-			autoAlpha:1
-		}, {
-			autoAlpha:0,
-			ease: Cubic.easeOut
-		});
+	TweenMax.to(".welcome-c-1", 1.1, {
+		autoAlpha:0,
+		y: 500,
+		rotation: -50,
+		ease: Cubic.easeInOut,
+				delay: 0.2
+
+	});
+
+		TweenMax.to(".welcome-c-2", 0.75, {
+		autoAlpha:0,
+		x: -100,
+		y:700,
+		rotation: 30,
+		ease: Cubic.easeInOut
+	});
+
+		TweenMax.fromTo(".welcome-overlay", 0.9, {
+		autoAlpha:1,
+		ease: Cubic.easeInOut
+	}, {
+		autoAlpha:0,
+		ease: Cubic.easeInOut,
+		delay: 1.1
+	});
+
 	});
 
 
