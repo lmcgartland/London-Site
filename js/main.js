@@ -276,10 +276,8 @@ Storefront.prototype._init = function() {
 
 		if(storefront.currentDisplayIndex == 0) $(".prev").css("opacity","0").css("visibility","hidden");
 		if(storefront.currentDisplayIndex > 0) $(".prev").css("visibility","visible").css("opacity","1");
-		if(storefront.currentDisplayIndex < storefront.displays.length-1) $(".next").css("visibility","visible").css("opacity","1");
 		if(storefront.currentDisplayIndex == storefront.displays.length-1) $(".next").css("opacity","0").css("visibility","hidden");
 		if(storefront.currentDisplayIndex < storefront.displays.length-1) $(".next").css("visibility","visible").css("opacity","1");
-		if(storefront.currentDisplayIndex > 0) $(".prev").css("visibility","visible").css("opacity","1");
 
 	}
 
