@@ -40,6 +40,22 @@ function Storefront(el) {
 
 };
 
+$(window).on('resize', function(){
+	scaleWin();
+});
+
+
+function scaleWin() {
+	      var win = $(window); //this = window
+
+      if (win.width() > 1500) {
+      }
+      else if (win.width() < 750)  {
+      }
+      else {
+      $(".storefront-wrapper").css("transform","translateX(-50%) translateY(-48%) scale("+(win.width()/($(".storefront-wrapper").width()+438))+")");
+      }
+}
 
 
 
@@ -53,7 +69,7 @@ Storefront.prototype._init = function() {
 
 	// toggleZoom();
 	advance(); // initial advance for setup
-
+	scaleWin();
 	/* Paging controls */
 
 	$( "a.next" ).click(function() {
