@@ -27,6 +27,48 @@ function Storefront(el) {
 
 };
 
+$(window).load(function(){
+	TweenMax.fromTo(".welcome-c-1", 0.75, {
+		autoAlpha:1,
+		x: -1000,
+		y: -500,
+		ease: Cubic.easeOut
+	}, {
+		autoAlpha:1,
+		x: -350,
+		y: -230,
+		rotation: -10,
+		ease: Cubic.easeOut,
+		delay: 0.5,
+	});
+
+		TweenMax.fromTo(".welcome-c-2", 0.9, {
+		autoAlpha:1,
+		x: 1000,
+		y: -500,
+		ease: Cubic.easeOut
+	}, {
+		autoAlpha:1,
+		x: -100,
+		y: -50,
+		rotation: 5,
+		ease: Cubic.easeOut,
+		delay: 0.7,
+	});
+
+});
+
+	$(".welcome-card").click(function() {
+		TweenMax.fromTo(".intro", 0.9, {
+			autoAlpha:1
+		}, {
+			autoAlpha:0,
+			ease: Cubic.easeOut
+		});
+	});
+
+
+
 $(window).on('resize', function(){
 	scaleWin();
 });
@@ -109,6 +151,7 @@ Storefront.prototype._init = function() {
 	$( "a.next" ).click(function() {
 		goNext();
 	});
+
 
 	$( "a.prev" ).click(function() {
 		goPrev();
