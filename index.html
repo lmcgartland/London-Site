@@ -34,7 +34,7 @@
 	</div>
 
 <script id="layerTemplate" type="text/x-jsrender">
-<li class="layer" data-depth="{{:depth}}">
+<li class="layer" data-depth="{{:depth}}" style="position: absolute; display: block; top: 0; left: 0;">
 {{for content}}
 	<div class="layer-item" style="background-image: url(img/{{:filename}}); width: {{:size.width}}px; height: {{:size.height}}px; background-size: {{:size.width}}px {{:size.height}}px; top: {{:position.x}}px; left: {{:position.y}}px;"></div>
 {{/for}}
