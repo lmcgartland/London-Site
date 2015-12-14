@@ -22,7 +22,7 @@ function Storefront(el) {
 	this.currentDisplayIndex = 0;
 	this.lastDisplayIndex = 0;
 	this._init();
-
+	$(".prev").css("opacity","0").css("visibility","hidden");
 
 
 };
@@ -240,6 +240,8 @@ Storefront.prototype._init = function() {
 	function goPrev() {
 		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
 		if(storefront.currentDisplayIndex > 0) storefront.currentDisplayIndex--;
+		
+
 		// if(storefront.currentDisplayIndex+1 > 0) $(".prev").addClass("disabled");
 		// else $(".prev").removeClass("disabled");
 		advance();
@@ -248,6 +250,7 @@ Storefront.prototype._init = function() {
 	function goNext() {
 		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
 		if(storefront.currentDisplayIndex < storefront.displays.length-1) storefront.currentDisplayIndex++;
+		
 		// if(storefront.currentDisplayIndex+1 <0) $(".next").addClass("disabled");
 		// else $(".next").removeClass("disabled");
 		advance();
@@ -270,6 +273,14 @@ Storefront.prototype._init = function() {
 			x: -$(storefront.displays[storefront.currentDisplayIndex]).width()*storefront.currentDisplayIndex, 
 			ease: Quad.easeInOut
 		});
+
+		if(storefront.currentDisplayIndex == 0) $(".prev").css("opacity","0").css("visibility","hidden");
+		if(storefront.currentDisplayIndex > 0) $(".prev").css("visibility","visible").css("opacity","1");
+		if(storefront.currentDisplayIndex < storefront.displays.length-1) $(".next").css("visibility","visible").css("opacity","1");
+		if(storefront.currentDisplayIndex == storefront.displays.length-1) $(".next").css("opacity","0").css("visibility","hidden");
+		if(storefront.currentDisplayIndex < storefront.displays.length-1) $(".next").css("visibility","visible").css("opacity","1");
+		if(storefront.currentDisplayIndex > 0) $(".prev").css("visibility","visible").css("opacity","1");
+
 	}
 
 	function toggleZoom() {
