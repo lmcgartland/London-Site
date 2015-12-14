@@ -1,10 +1,4 @@
 jQuery(document).ready(function(){
-	/*$('#scene').parallax({
-		relativeInput: true,
-		clipRelativeInput: true,
-		invertY: true
-	});*/
-
 (function() {
 	var storefront = new Storefront($('.storefront'));
 })();
@@ -188,6 +182,16 @@ Storefront.prototype._init = function() {
 	// toggleZoom();
 	advance(); // initial advance for setup
 	scaleWin();
+
+	$('#scene').parallax({
+		relativeInput: true,
+		clipRelativeInput: true,
+		invertY: true
+	});
+
+	$("#scene").on("mouseover", function() {
+		console.log("Scene moused over");
+	})
 
 	$(".layer-item-highlighted").hide();
 
