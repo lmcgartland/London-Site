@@ -5,20 +5,6 @@ jQuery(document).ready(function(){
 		invertY: true
 	});*/
 
-$("#display-1").click(function(){
-	$("#ov-1").animate({"margin-top": "0vh"});
-	$("#oc-1").animate({"visibility": "visible"});
-});
-$("#display-2").click(function(){
-	$("#ov-1").animate({"margin-top": "0vh"});
-	$("#oc-2").animate({"visibility": "visible"});
-});
-$("#ov-1").click(function(){
-	$("#ov-1").animate({"margin-top": "100vh"});
-	$(".overlay-content").animate({"visibility": "hidden"});
-
-});
-
 (function() {
 	var storefront = new Storefront($('.storefront'));
 })();
@@ -57,6 +43,36 @@ function scaleWin() {
     	$(".storefront-wrapper").css("transform","translateX(-50%) translateY(-48%) scale("+(win.width()/($(".storefront-wrapper").width()+438))+")");
     }
 }
+
+
+
+
+
+
+$(".layer-item").mouseenter( function(){
+	var title = $(this).attr('title');
+
+	$(".tooltip").html(title);
+
+	TweenMax.to(".tooltip", 1, {
+		autoAlpha:1,
+		scale: 1,
+		ease: Elastic.easeOut
+	});
+
+} ).mouseleave( function(){
+	TweenMax.to(".tooltip", 0.2, {
+		autoAlpha:0,
+		scale: 0,
+		ease: Cubic.easeIn
+	});
+
+} ).mousemove(function(e) {
+	var mousex = e.pageX + 10; //Get X coordinates
+        var mousey = e.pageY + 10; //Get Y coordinates
+        $('.tooltip')
+        .css({ top: mousey, left: mousex })
+});
 
 
 
@@ -122,12 +138,16 @@ Storefront.prototype._init = function() {
 	function goPrev() {
 		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
 		if(storefront.currentDisplayIndex > 0) storefront.currentDisplayIndex--;
+		// if(storefront.currentDisplayIndex+1 > 0) $(".prev").addClass("disabled");
+		// else $(".prev").removeClass("disabled");
 		advance();
 	}	
 
 	function goNext() {
 		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
 		if(storefront.currentDisplayIndex < storefront.displays.length-1) storefront.currentDisplayIndex++;
+		// if(storefront.currentDisplayIndex+1 <0) $(".next").addClass("disabled");
+		// else $(".next").removeClass("disabled");
 		advance();
 	}	
 
@@ -136,6 +156,13 @@ Storefront.prototype._init = function() {
 
 		$("g.indicator-group circle:nth-child("+(storefront.lastDisplayIndex+1)+")").attr("class", "indicator");
 		$("g.indicator-group circle:nth-child("+(storefront.currentDisplayIndex+1)+")").attr("class", "indicator active");
+
+		var displayTitle = $(storefront.displays[storefront.currentDisplayIndex]).attr("title");
+		var displayCreds = $(storefront.displays[storefront.currentDisplayIndex]).attr("creds");
+
+		$("h2.display-title").html(displayTitle);
+		$("span.display-creds").html(displayCreds);
+
 
 		TweenMax.to(".storefront", 0.4, {
 			x: -$(storefront.displays[storefront.currentDisplayIndex]).width()*storefront.currentDisplayIndex, 
