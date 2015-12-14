@@ -1,7 +1,7 @@
 jQuery(document).ready(function(){
 	var data;
 
-	$.getJSON('data/process_window_data.json', function(response){
+	$.getJSON('data/travel_window_data.json', function(response){
 		data = response;
 	})
 	.success(function() { 
