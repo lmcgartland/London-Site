@@ -88,14 +88,12 @@ font-size: 0; /* hide spacing that comes with inline-block elements */
 	height: 575px;
 	padding: 0;
 	margin: 0 400px 0 0;
-	background: rgba(0,255,0,0.5);
 	border: 0;
 }
 
 .display {
 	position: relative;
 	background-color: purple;
-	opacity: 0.5;
 	width: 100%;
 	height: 100%;
 	padding: 0;
