@@ -95,6 +95,42 @@ $(window).on('resize', function(){
 	scaleWin();
 });
 
+$(".prev").click(function(){
+
+	var tl = new TimelineLite();
+
+	tl.to(this, 0.1, {
+		x: -25,
+		ease: Elastic.easeInOut
+	}).to(this, 0.1, {
+		x: 10,
+		ease: Elastic.easeInOut,
+	}).to(this, 0.1, {
+		x: 0,
+		ease: Elastic.easeInOut,
+	});
+
+
+});
+
+$(".next").click(function(){
+
+	var tl = new TimelineLite();
+
+	tl.to(this, 0.1, {
+		x: 25,
+		ease: Elastic.easeInOut
+	}).to(this, 0.1, {
+		x: -10,
+		ease: Elastic.easeInOut,
+	}).to(this, 0.1, {
+		x: 0,
+		ease: Elastic.easeInOut,
+	});
+
+
+});
+
 
 function scaleWin() {
 
