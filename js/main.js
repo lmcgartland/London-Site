@@ -105,12 +105,16 @@ Storefront.prototype._init = function() {
 	function goPrev() {
 		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
 		if(storefront.currentDisplayIndex > 0) storefront.currentDisplayIndex--;
+		// if(storefront.currentDisplayIndex+1 > 0) $(".prev").addClass("disabled");
+		// else $(".prev").removeClass("disabled");
 		advance();
 	}	
 
 	function goNext() {
 		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
 		if(storefront.currentDisplayIndex < storefront.displays.length-1) storefront.currentDisplayIndex++;
+		// if(storefront.currentDisplayIndex+1 <0) $(".next").addClass("disabled");
+		// else $(".next").removeClass("disabled");
 		advance();
 	}	
 
