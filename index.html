@@ -23,7 +23,7 @@
 	<script src="js/greensock-js/src/uncompressed/TweenMax.js"></script>
 	<script src="js/greensock-js/src/uncompressed/jquery.gsap.js"></script>
 	<script src="js/jquery.parallax.js"></script>
-	<script src="js/main.js"></script>
+	<!--<script src="js/main.js"></script>-->
 
 
 	<!--CSS-->
@@ -32,6 +32,16 @@
 </head>
 
 <body>
+<div class="intro">
+<div class="welcome-overlay"></div>
+<div class="welcome-card welcome-c-1">
+    <img src="img/modal.png">
+</div>
+<div class="welcome-card welcome-c-2">
+    <img src="img/card_back.png">
+</div>
+</div>
+
 	<div class="container">
 
 		<div class="overlay" id="ov-1">
@@ -47,58 +57,74 @@
 
 		</div>
 
-		<a href="#" class="zoom" style="position:absolute;z-index:100;">Zoom</a>
+		<div class="header-nav">
+			<h2 class="display-title">Window Title</h2>
+			<h3>by <span class="display-creds">Bob Bob</span></h3>
+		</div>
 
-		<a href="#" class="next paging-control" style="position:absolute;z-index:100;bottom:0;right:0;">Next</a>
-		<a href="#" class="prev paging-control" style="position:absolute;z-index:100;bottom:0;left:0;">Prev</a>
+		<a href="#" class="next paging-control">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<polyline stroke-width="5" points="17.4,2.7 30.3,25.4 17.4,47.3 "/>
+</svg>
+
+		</a>
+		<a href="#" class="prev paging-control">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<polyline stroke-width="5" points="30.3,2.7 17.4,25.4 30.3,47.3 "/>
+</svg>
+
+		</a>
 
 		<div class="paging-indicator">
 			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 56" style="enable-background:new 0 0 500 56;" xml:space="preserve">
-				<line class="indicator-line" x1="44.7" y1="29.2" x2="455.3" y2="29.2"/>
+				<line class="indicator-line" x1="44" y1="29.2" x2="456" y2="29.2"/>
 				<g class="indicator-group">
-					<circle class="indicator" cx="44.7" cy="29.2" r="5.8"/>
-					<circle class="indicator" cx="81" cy="29.2" r="5.8"/>
-					<circle class="indicator" cx="121.8" cy="29.2" r="5.8"/>
-					<circle class="indicator" cx="452.1" cy="29.2" r="5.8"/>
+					<circle class="indicator" cx="44" cy="29.2" r="7"/>
+					<circle class="indicator" cx="126.4" cy="29.2" r="7"/>
+					<circle class="indicator" cx="208.8" cy="29.2" r="7"/>
+					<circle class="indicator" cx="291.2" cy="29.2" r="7"/>
+					<circle class="indicator" cx="373.6" cy="29.2" r="7"/>
+					<circle class="indicator" cx="456" cy="29.2" r="7"/>
 				</g>
 			</svg>
 
 		</div>
-		<div class="storefront-stage">
+		<div class="storefront-stage"> 
+
+		<div class="backdrop"></div>
+<div class="tooltip"></div>
+
 			<div class="storefront-wrapper">
 
-				<div class="storefront">
+				<div class="storefront"> 
 					<div class="display-wrapper">
 						<div class="display-container">
-							<div class="display" id="display-1">
+							<div class="display" id="display-1" data-title="Media" creds="Jane Byon"> 
 								<div class="display-item item-test">
 									<ul id="scene" class="scene">
-										<li class="layer" data-depth="0" style="position: relative; display: block; top: 0; left: 0;">
+										<li class="layer" data-depth="0.4" style="position: relative; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/media_0009_0_background.png); width: 1050px; height: 575px; background-size: 1050px 575px; top: 0px; left: 0px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/media_0008_1_dneg_poster.png); width: 495px; height: 299px; background-size: 495px 299px; top: 0px; left: 385px;"></div>
+										<li class="layer" data-depth="0.3" style="position: absolute; display: block; top: 0; left: 0;">
+											<div id="media_0008_1_dneg_poster" class="layer-item" style="background-image: url(img/media_0008_1_dneg_poster.png); width: 495px; height: 299px; background-size: 495px 299px; top: 0px; left: 385px;" data-title="<h3>Double Negative</h3>Though we had been exposed to animation through our classes prior to the trip, stepping into D-Neg and seeing for ourselves the ridiculous amount of man hours put into seconds of an animation was invaluable experience."></div>
+
+											<div id="media_0008_1_dneg_poster_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/media_0007_1_dneg_poster_highlighted.png); width: 523.5px; height: 313.5px; background-size: 523.5px 313.5px; top: 0px; left: 371px;"></div>
+										
+											<div id="media_0006_1_tate_poster" class="layer-item" style="background-image: url(img/media_0006_1_tate_poster.png); width: 196px; height: 300px; background-size: 196px 300px; top: 0px; left: 170px;" data-title="<h3>The Tate Modern</h3>The Tate Modern Museum is a perfect example of the blend between arts and technology. It showed that London’s art museums and galleries are very open-minded in terms of the use of technology to enhance the experience, and the Tate is very focused on increasing engagement and getting people interested in art’s context/background.<br><br>One of the coolest projects to see was the IK Media Challenge, an example of an initiative that the museum uses to stimulate interest in art. A memorable project was one based off of the game Minecraft where a team recreated virtual environments to experience famous art pieces."></div>
+
+											<div id="media_0006_1_tate_poster_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/media_0005_1_tate_poster_highlighted.png); width: 225px; height: 314.5px; background-size: 225px 314.5px; top: 0px; left: 155.5px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/media_0007_1_dneg_poster_highlighted.png); width: 523.5px; height: 313.5px; background-size: 523.5px 313.5px; top: 0px; left: 371px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/media_0006_1_tate_poster.png); width: 196px; height: 300px; background-size: 196px 300px; top: 0px; left: 170px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/media_0005_1_tate_poster_highlighted.png); width: 225px; height: 314.5px; background-size: 225px 314.5px; top: 0px; left: 155.5px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
+										<li class="layer" data-depth="0.2" style="position: absolute; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/media_0004_2_seats_back.png); width: 534px; height: 187px; background-size: 534px 187px; top: 313px; left: 231px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
+										<li class="layer" data-depth="0.1" style="position: absolute; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/media_0003_3_seats_front.png); width: 766px; height: 368px; background-size: 766px 368px; top: 174px; left: 145px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/media_0002_3_award.png); width: 36px; height: 95px; background-size: 36px 95px; top: 166px; left: 397px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/media_0001_3_award_highlighted.png); width: 64px; height: 123.5px; background-size: 64px 123.5px; top: 152px; left: 383px;"></div>
+										
+											<div class="layer-item" style="background-image: url(img/media_0002_3_award.png); width: 36px; height: 95px; background-size: 36px 95px; top: 166px; left: 397px;" data-title="Lorem Ipsum Dolor"></div>
+										
+											<div class="layer-item layer-item-highlighted" style="background-image: url(img/media_0001_3_award_highlighted.png); width: 64px; height: 123.5px; background-size: 64px 123.5px; top: 152px; left: 383px; display: none;"></div>
 										</li>
 										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/media_0000_4_curtains.png); width: 1050px; height: 575px; background-size: 1050px 575px; top: 0px; left: 0px;"></div>
@@ -110,77 +136,73 @@
 						</div>
 
 						<div class="display-container">
-							<div class="display" id="display-2">
+							<div class="display" id="display-2"  data-title="Culture" creds="Montana Reed">
 								<div class="display-item item-test">
 									<ul class="scene">
-										<li class="layer" data-depth="0" style="position: relative; display: block; left: 0px; top: 0px;">
+										<li class="layer" data-depth="0.4" style="position: relative; display: block; left: 0px; top: 0px;">
 											<div class="layer-item" style="background-image: url(img/Culture_0021_background.png); width: 1050px; height: 575px; background-size: 1050px 575px; top: 0px; left: 0px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; left: 0px; top: 0px;">
+										<li class="layer" data-depth="0.3" style="position: absolute; display: block; left: 0px; top: 0px;">
 											<div class="layer-item" style="background-image: url(img/Culture_0020_wheel.png); width: 319px; height: 374px; background-size: 319px 374px; top: 128.5px; left: 373.5px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; left: 0px; top: 0px;">
-											<div class="layer-item" style="background-image: url(img/Culture_0019_worlds_end.png); width: 109.5px; height: 109.5px; background-size: 109.5px 109.5px; top: 113px; left: 291.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0018_street_art.png); width: 107.5px; height: 107.5px; background-size: 107.5px 107.5px; top: 89.5px; left: 645px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0017_shoreditch.png); width: 113.5px; height: 114px; background-size: 113.5px 114px; top: 338px; left: 676.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0016_tea.png); width: 113px; height: 112.5px; background-size: 113px 112.5px; top: 438px; left: 565px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0015_peter_pan.png); width: 114.5px; height: 114.5px; background-size: 114.5px 114.5px; top: 208px; left: 701.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0014_camden.png); width: 113px; height: 113px; background-size: 113px 113px; top: 441.5px; left: 395px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0013_bangers_mash.png); width: 106px; height: 106.5px; background-size: 106px 106.5px; top: 362.5px; left: 294px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0012_nightlife.png); width: 110.5px; height: 110.5px; background-size: 110.5px 110.5px; top: 25.5px; left: 393.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0011_greek_restaurant.png); width: 106px; height: 106.5px; background-size: 106px 106.5px; top: 241.5px; left: 253px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0010_london_museums.png); width: 110.5px; height: 110.5px; background-size: 110.5px 110.5px; top: 15.5px; left: 531px;"></div>
+										<li class="layer" data-depth="0.2" style="position: absolute; display: block; left: 0px; top: 0px;">
+											<div id="Culture_0019_worlds_end" class="layer-item" style="background-image: url(img/Culture_0019_worlds_end.png); width: 109.5px; height: 109.5px; background-size: 109.5px 109.5px; top: 113px; left: 291.5px;" data-title="<h3>World’s End Pub</h3>On our day off, a few of us traveled to the famous World’s End Pub to get a better taste of London and see the inspiration for the recent Edgar Wright movie."></div>
+											<div id="Culture_0018_street_art" class="layer-item" style="background-image: url(img/Culture_0018_street_art.png); width: 107.5px; height: 107.5px; background-size: 107.5px 107.5px; top: 89.5px; left: 645px;" data-title="<h3>Street Art</h3>We all were fascinated with the mind bendingly impressive displays of graffiti and other street art from London to Bristol, noting famous works from Bansky, (Space) Invader, and others."></div>
+											<div id="Culture_0017_shoreditch" class="layer-item" style="background-image: url(img/Culture_0017_shoreditch.png); width: 113.5px; height: 114px; background-size: 113.5px 114px; top: 338px; left: 676.5px;" data-title="<h3>Shoreditch</h3>Many of us made the couple of bus transfers in order to get out to Shoreditch and get a glimpse at the stores, markets, and street art that make the district a focal point for modern British creativity."></div>
+											<div id="Culture_0016_tea" class="layer-item" style="background-image: url(img/Culture_0016_tea.png); width: 113px; height: 112.5px; background-size: 113px 112.5px; top: 438px; left: 565px;" data-title="<h3>Traditional Tea Time</h3>In an effort to fully assimilate into the British culture, near the end of the trip we even enjoyed taking a short break from tours to enjoy some tea, hot chocolate, and snacks."></div>
+											<div id="Culture_0015_peter_pan" class="layer-item" style="background-image: url(img/Culture_0015_peter_pan.png); width: 114.5px; height: 114.5px; background-size: 114.5px 114.5px; top: 208px; left: 701.5px;" data-title="<h3>J. M. Barrie’s Peter Pan at Regent’s Theatre:</h3>We were lucky enough to end our walk through the famed Regent’s Park with a play at the Open Air Theater, an inventive take on the classic story of Peter Pan."></div>
+											<div id="Culture_0014_camden" class="layer-item" style="background-image: url(img/Culture_0014_camden.png); width: 113px; height: 113px; background-size: 113px 113px; top: 441.5px; left: 395px;" data-title="<h3>Food Stalls at Camden</h3>A cultural melting pot boiling with inclusivity, it’s easy to see that places like New York took their inspiration from Camden. The beauty of this area is that one street in Camden stretches to accommodate all corners of the globe, a quality apparent in its street food. A visit to the food stalls in Camden gave us the opportunity to sample the many different cuisines available in London."></div>
+											<div id="Culture_0013_bangers_mash" class="layer-item" style="background-image: url(img/Culture_0013_bangers_mash.png); width: 106px; height: 106.5px; background-size: 106px 106.5px; top: 362.5px; left: 294px;" data-title="<h3>Bangers and Mash / Fish and Chips:</h3>We ate so much in London. It would be a shame if we never got a chance to enjoy traditional Bangers and Mash or Fish and Chips whilst there, so we made sure to have them as our first meal there!"></div>
+											<div id="Culture_0012_nightlife" class="layer-item" style="background-image: url(img/Culture_0012_nightlife.png); width: 110.5px; height: 110.5px; background-size: 110.5px 110.5px; top: 25.5px; left: 393.5px;" data-title="<h3>Nightlife</h3>Some could call it bonding. Others might just call it fun. Whatever you call it, us Academy kids never shy away from new experiences, and we made sure to keep exploring London even after it got dark. Thankfully, at the this time, we were all 18+."></div>
+											<div id="Culture_0011_greek_restaurant" class="layer-item" style="background-image: url(img/Culture_0011_greek_restaurant.png); width: 106px; height: 106.5px; background-size: 106px 106.5px; top: 241.5px; left: 253px;" data-title="<h3>Greek Restaurant</h3>We ate a lot in London. And one night, we were fortunate enough to be taken out to dinner by Matt Stern and his parents, who were also in London. A favorite memory for many of us, how could a night ending in smashing plates while dancing around with your professors not be something we still rave about? Thank you, Sterns!"></div>
+											<div id="Culture_0010_london_museums" class="layer-item" style="background-image: url(img/Culture_0010_london_museums.png); width: 110.5px; height: 110.5px; background-size: 110.5px 110.5px; top: 15.5px; left: 531px;" data-title="<h3>London Museums</h3>London has possibly the best assortment of museums of any city, and we made sure to take advantage of it. Some highlights: the Rosetta Stone at the British Museum; George Seurat’s Bathers at Asniéres at the National Gallery; and the Dinosaurs at the Natural History Museum."></div>
+										
+											<div id="Culture_0019_worlds_end_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0009_worlds_end_highlighted.png); width: 149.5px; height: 149.5px; background-size: 149.5px 149.5px; top: 93px; left: 271.5px;"></div>
+											<div id="Culture_0018_street_art_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0008_street_art_highlighted.png); width: 147.5px; height: 147.5px; background-size: 147.5px 147.5px; top: 69.5px; left: 625px;"></div>
+											<div id="Culture_0017_shoreditch_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0007_shoreditch_highlighted.png); width: 153.5px; height: 154px; background-size: 153.5px 154px; top: 318px; left: 656.5px;"></div>
+											<div id="Culture_0016_tea_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0006_tea_highlighted.png); width: 152.5px; height: 152.5px; background-size: 152.5px 152.5px; top: 418px; left: 545px;"></div>
+											<div id="Culture_0015_peter_pan_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0005_peter_pan_highlighted.png); width: 154.5px; height: 154.5px; background-size: 154.5px 154.5px; top: 188px; left: 681.5px;"></div>
+											<div id="Culture_0014_camden_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0004_camden_highlighted.png); width: 153px; height: 153px; background-size: 153px 153px; top: 421.5px; left: 375px;"></div>
+											<div id="Culture_0013_bangers_mash_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0003_bangers_mash_highlighted.png); width: 146px; height: 146px; background-size: 146px 146px; top: 343px; left: 274px;"></div>
+											<div id="Culture_0012_nightlife_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0002_nightlife_highlighted.png); width: 150.5px; height: 150.5px; background-size: 150.5px 150.5px; top: 5.5px; left: 373.5px;"></div>
+											<div id="Culture_0011_greek_restaurant_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0001_greek_restaurant_highlighted.png); width: 146px; height: 146px; background-size: 146px 146px; top: 222px; left: 233px;"></div>
+											<div id="Culture_0010_london_museums_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Culture_0000_london_museums.png); width: 150.5px; height: 146px; background-size: 150.5px 146px; top: 0px; left: 511px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; left: 0px; top: 0px;">
-											<div class="layer-item" style="background-image: url(img/Culture_0009_worlds_end_highlighted.png); width: 149.5px; height: 149.5px; background-size: 149.5px 149.5px; top: 93px; left: 271.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0008_street_art_highlighted.png); width: 147.5px; height: 147.5px; background-size: 147.5px 147.5px; top: 69.5px; left: 625px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0007_shoreditch_highlighted.png); width: 153.5px; height: 154px; background-size: 153.5px 154px; top: 318px; left: 656.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0006_tea_highlighted.png); width: 152.5px; height: 152.5px; background-size: 152.5px 152.5px; top: 418px; left: 545px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0005_peter_pan_highlighted.png); width: 154.5px; height: 154.5px; background-size: 154.5px 154.5px; top: 188px; left: 681.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0004_camden_highlighted.png); width: 153px; height: 153px; background-size: 153px 153px; top: 421.5px; left: 375px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0003_bangers_mash_highlighted.png); width: 146px; height: 146px; background-size: 146px 146px; top: 343px; left: 274px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0002_nightlife_highlighted.png); width: 150.5px; height: 150.5px; background-size: 150.5px 150.5px; top: 5.5px; left: 373.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0001_greek_restaurant_highlighted.png); width: 146px; height: 146px; background-size: 146px 146px; top: 222px; left: 233px;"></div>
-											<div class="layer-item" style="background-image: url(img/Culture_0000_london_museums.png); width: 150.5px; height: 146px; background-size: 150.5px 146px; top: -4.5px; left: 511px;"></div>
-										</li>-->
 									</ul>
 								</div>
 							</div>
 						</div>
 
 						<div class="display-container">
-							<div class="display" id="display-3">
+							<div class="display" id="display-3"  data-title="Product Design" creds="Will Erwin">
 								<div class="display-item item-test">
-									<ul id="scene" class="scene">
-										<li class="layer" data-depth="0" style="position: relative; display: block; top: 0; left: 0;">
+									<ul class="scene">
+										<li class="layer" data-depth="0.3" style="position: relative; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/Product-Design_0013_0_background.png); width: 1050px; height: 575px; background-size: 1050px 575px; top: 0px; left: 0px;"></div>
-											<div class="layer-item" style="background-image: url(img/Product-Design_0012_0_computer.png); width: 381px; height: 122px; background-size: 381px 122px; top: 183px; left: 117px;"></div>
-											<div class="layer-item" style="background-image: url(img/Product-Design_0011_0_postits.png); width: 183.5px; height: 123px; background-size: 183.5px 123px; top: 178.5px; left: 521.5px;"></div>
+											<div id="Product-Design_0012_0_computer" class="layer-item" style="background-image: url(img/Product-Design_0012_0_computer.png); width: 381px; height: 122px; background-size: 381px 122px; top: 183px; left: 117px;" data-title="<h3>UX/Software Product</h3>With the mantra of Huge Inc. focused on users as opposed to customers, the usability of their web applications is a major stress in each of their products. We walked away from their presentation with valuable insight into what it means for people to interact meaningfully with your product or technology."></div>
+											<div id="Product-Design_0011_0_postits" class="layer-item" style="background-image: url(img/Product-Design_0011_0_postits.png); width: 183.5px; height: 123px; background-size: 183.5px 123px; top: 178.5px; left: 521.5px;" data-title="<h3>Research and Notes</h3>Every designer and engineer we spoke with stressed the importance of research and iterating in the pursuit of well-designed product. Every piece of work presented to us was accompanied by explanations of the research, prototypes, and lessons learned along the way that made the product possible."></div>
+										
+											<div id="Product-Design_0012_0_computer_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Product-Design_0010_0_computer_highlighted.png); width: 437.5px; height: 180px; background-size: 437.5px 180px; top: 154px; left: 88.25px;"></div>
+											<div id="Product-Design_0011_0_postits_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Product-Design_0009_0_postits_highlighted.png); width: 241.5px; height: 181px; background-size: 241.5px 181px; top: 149.5px; left: 492.5px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Product-Design_0010_0_computer_highlighted.png); width: 437.5px; height: 180px; background-size: 437.5px 180px; top: 154px; left: 88.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Product-Design_0009_0_postits_highlighted.png); width: 241.5px; height: 181px; background-size: 241.5px 181px; top: 149.5px; left: 492.5px;"></div>
+										<li class="layer" data-depth="0.3" style="position: absolute; display: block; top: 0; left: 0;">
+											<div id="Product-Design_0008_1_sign" class="layer-item" style="background-image: url(img/Product-Design_0008_1_sign.png); width: 248px; height: 147px; background-size: 248px 147px; top: 3.5px; left: 413px;" data-title="<h3>Design Process</h3>Huge’s design process calls for periods of research, ideation, and iteration in order to ask and answer the right question for its clients."></div>
+										
+											<div id="Product-Design_0008_1_sign_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Product-Design_0007_1_sign_highlighted.png); width: 306px; height: 179.5px; background-size: 306px 179.5px; top: 0px; left: 384px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Product-Design_0008_1_sign.png); width: 248px; height: 147px; background-size: 248px 147px; top: 3.5px; left: 413px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Product-Design_0007_1_sign_highlighted.png); width: 306px; height: 179.5px; background-size: 306px 179.5px; top: 0px; left: 384px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
+										<li class="layer" data-depth="0.25" style="position: absolute; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/Product-Design_0006_2_plant.png); width: 111.5px; height: 310.5px; background-size: 111.5px 310.5px; top: 167.5px; left: 86px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
+										<li class="layer" data-depth="0.2" style="position: absolute; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/Product-Design_0005_3_chair.png); width: 185.5px; height: 234.5px; background-size: 185.5px 234.5px; top: 263px; left: 217px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Product-Design_0004_4_hand.png); width: 244.5px; height: 334.5px; background-size: 244.5px 334.5px; top: 199.5px; left: 685px;"></div>
-											<div class="layer-item" style="background-image: url(img/Product-Design_0003_4_H.png); width: 128.5px; height: 168px; background-size: 128.5px 168px; top: 359.5px; left: 510.5px;"></div>
+										<li class="layer" data-depth="0.1" style="position: absolute; display: block; top: 0; left: 0;">
+											<div id="Product-Design_0004_4_hand" class="layer-item" style="background-image: url(img/Product-Design_0004_4_hand.png); width: 244.5px; height: 334.5px; background-size: 244.5px 334.5px; top: 199.5px; left: 685px;" data-title="<h3>Royal College of Art</h3>A step up from many projects we’ve seen before, RCA students boasted market-ready products that displayed strong design, manufacturing and sustainability. One of the most interesting projects was a student who created a glove that shot lightning. The project, as he described it, was purely an explorative effort into the notion: can you shoot electricity out of your hands? To our amazement, this RCA student proved yes!  And that electricity is a pretty breathtaking sculpting tool."></div>
+											<div id="Product-Design_0003_4_H" class="layer-item" style="background-image: url(img/Product-Design_0003_4_H.png); width: 128.5px; height: 168px; background-size: 128.5px 168px; top: 359.5px; left: 510.5px;" data-title="<h3>Huge Design</h3>Huge easily had one of the most intriguing and entertaining presentations about their company of everything we had seen throughout the trip. For them, everything always comes back to design principles, asking the simple, but profound question of what the challenge is at hand. Huge always seeks to dig below the surface and uncover their clients unseen and unspoken need as opposed to the surface issues they may address at the outset.<br><br>The representatives comforted us saying that being a generalist is okay; it can be an exceedingly valuable skill. They encourage and look for people that have broad backgrounds and one or two specialties as the biggest innovations often come from these groups.<br><br>Simplicity is key here. At the end of the day, HUGE must compete with its competitors and seeks to strip their clients’ product down to bare essentials so as to avoid any excess fat. This provides a valuable experience for the client’s customers so that they get exactly what they’re looking for if they are viewing a company's website, for example."></div>
 											<div class="layer-item" style="background-image: url(img/Product-Design_0002_4_lamp.png); width: 346.5px; height: 346.5px; background-size: 346.5px 346.5px; top: -2px; left: 659.5px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Product-Design_0001_4_hand_highlighted.png); width: 300.5px; height: 391px; background-size: 300.5px 391px; top: 172px; left: 657.5px;"></div>
-											<div class="layer-item" style="background-image: url(img/Product-Design_0000_4_H_highlighted.png); width: 186.5px; height: 225.5px; background-size: 186.5px 225.5px; top: 331px; left: 481.5px;"></div>
+										
+											<div id="Product-Design_0004_4_hand_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Product-Design_0001_4_hand_highlighted.png); width: 300.5px; height: 391px; background-size: 300.5px 391px; top: 172px; left: 657.5px;"></div>
+											<div id="Product-Design_0003_4_H_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Product-Design_0000_4_H_highlighted.png); width: 186.5px; height: 225.5px; background-size: 186.5px 225.5px; top: 331px; left: 481.5px;"></div>
 										</li>
 
 									</ul>
@@ -189,26 +211,22 @@
 						</div>
 
 						<div class="display-container">
-							<div class="display" id="display-4">
+							<div class="display" id="display-4"  data-title="Process" creds="Chloe Chan">
 								<div class="display-item item-test">
-									<ul id="scene" class="scene">
-										<li class="layer" data-depth="0" style="position: relative; display: block; top: 0; left: 0;">
+									<ul class="scene">
+										<li class="layer" data-depth="0.3" style="position: relative; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/Process_0005_0_background.png); width: 1050px; height: 575px; background-size: 1050px 575px; top: 0px; left: 0px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
+										<li class="layer" data-depth="0.2" style="position: absolute; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/Process_0004_1_conveyor.png); width: 745.5px; height: 453px; background-size: 745.5px 453px; top: 61px; left: 178.5px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Process_0003_1_burberry.png); width: 230px; height: 93px; background-size: 230px 93px; top: 109px; left: 416px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Process_0002_1_marshall.png); width: 797px; height: 365px; background-size: 797px 365px; top: 184px; left: 164.5px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Process_0001_1_burberry_highlighted.png); width: 286px; height: 149px; background-size: 286px 149px; top: 81.5px; left: 387.5px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Process_0000_1_marshall_highlighted.png); width: 853px; height: 419px; background-size: 853px 419px; top: 156px; left: 136.5px;"></div>
+										
+											<div id="Process_0003_1_burberry" class="layer-item" style="background-image: url(img/Process_0003_1_burberry.png); width: 230px; height: 93px; background-size: 230px 93px; top: 109px; left: 416px;" data-title="<h3>Burberry</h3>At Burberry, all of their work for each of their products are all created with in house workers. This well oiled-machine not only reduces costs by not having the need to outsource marketing, content creation or product development, but remains a leader in the industry by creating trends several years in advance.<br><br>A refreshing principle to see at Burberry was how much the company valued its employees. They get various perks in terms of getting phenomenal discounts on new clothing, the company refuses to overwork them and provides lenient work hours to have happy, productive employees. The fact that every department was in one building showed that Burberry values efficient communication as well."></div>
+										
+											<div id="Process_0002_1_marshall" class="layer-item" style="background-image: url(img/Process_0002_1_marshall.png); width: 797px; height: 365px; background-size: 797px 365px; top: 184px; left: 164.5px;" data-title="<h3>Marshall Amps</h3>After a year of learning primarily about innovation, visiting Marshall Amps was an old-fashioned lesson that innovation isn’t always necessary. Marshall still utilizes man-made manufacturing. As a matter of fact, nearly every aspect of the manufacturing process is done by hand. Where innovation might be the selling point of an Apple or Pixar, Marshall’s appeal is its tradition and its heritage seeped in years of auditory perfection.<br><br>As opposed to innovating products, Marshall remains innovative through its investment in instrument manufacture and their commitment to being sustainable. Marshall sends its leftover wood scraps to make beds for animals. It also allows a customizable feature on its website where customers can personalize their amps."></div>
+										
+											<div id="Process_0003_1_burberry_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Process_0001_1_burberry_highlighted.png); width: 286px; height: 149px; background-size: 286px 149px; top: 81.5px; left: 387.5px;"></div>
+										
+											<div id="Process_0002_1_marshall_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Process_0000_1_marshall_highlighted.png); width: 853px; height: 419px; background-size: 853px 419px; top: 156px; left: 136.5px;"></div>
 										</li>
 									</ul>
 								</div>
@@ -216,26 +234,23 @@
 						</div>
 
 						<div class="display-container">
-							<div class="display" id="display-5">
+							<div class="display" id="display-5"  data-title="Travel" creds="Sara Ma">
 								<div class="display-item item-test">
-									<ul id="scene" class="scene">
-										<li class="layer" data-depth="0" style="position: relative; display: block; top: 0; left: 0;">
+									<ul class="scene">
+										<li class="layer" data-depth="0.3" style="position: relative; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/Travel_0005_0_background.png); width: 1050px; height: 575px; background-size: 1050px 575px; top: 0px; left: 0px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
+										<li class="layer" data-depth="0.2" style="position: absolute; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/Travel_0004_1_card.png); width: 738.5px; height: 467px; background-size: 738.5px 467px; top: 54px; left: 153px;"></div>
+										
+											<div id="Travel_0003_2_cars" class="layer-item" style="background-image: url(img/Travel_0003_2_cars.png); width: 117.5px; height: 479.5px; background-size: 117.5px 479.5px; top: 48px; left: 609.5px;" data-title="<h3>Cabbies</h3>The prized title of a Cabbie is earned by those who matriculate through a special driver school to achieve their cabbie medallion. Whereas drivers in the States can be almost anyone and aren’t particularly held in high regard, London Cabbies have the reputation of being well educated and reformed. Uber largely contrasts the tradition of cabbies as these drivers don’t have to spend years learning all of the major locations and routes of their surrounding areas."></div>
+
+											<div id="Travel_0003_2_cars_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Travel_0001_2_cars_highlighted.png); width: 173.5px; height: 536.5px; background-size: 173.5px 536.5px; top: 19.5px; left: 582px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Travel_0003_2_cars.png); width: 117.5px; height: 479.5px; background-size: 117.5px 479.5px; top: 48px; left: 609.5px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Travel_0002_2_buildings.png); width: 409.5px; height: 380.5px; background-size: 409.5px 380.5px; top: 102px; left: 181px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Travel_0001_2_cars_highlighted.png); width: 173.5px; height: 536.5px; background-size: 173.5px 536.5px; top: 19.5px; left: 582px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Travel_0000_2_buildings_highlighted.png); width: 501px; height: 516px; background-size: 501px 516px; top: 59px; left: 136.5px;"></div>
+										<li class="layer" data-depth="0.1" style="position: absolute; display: block; top: 0; left: 0;">
+											<div id="Travel_0002_2_buildings" class="layer-item" style="background-image: url(img/Travel_0002_2_buildings.png); width: 409.5px; height: 380.5px; background-size: 409.5px 380.5px; top: 102px; left: 181px;" data-title="<h3>The Tube</h3>In London, public transportation is life. The majority of the population uses public transportation and it isn’t uncanny to see CEO’s in the seat next to you. The tube boasts a strikingly modern design, despite how old these systems are."></div>
+										
+											<div id="Travel_0002_2_buildings_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Travel_0000_2_buildings_highlighted.png); width: 501px; height: 516px; background-size: 501px 516px; top: 59px; left: 136.5px;"></div>
 										</li>
 									</ul>
 
@@ -244,28 +259,23 @@
 						</div>
 
 						<div class="display-container">
-							<div class="display" id="display-6">
+							<div class="display" id="display-6"  data-title="Fashion" creds="Serene Boachie">
 								<div class="display-item item-test">
-									<ul id="scene" class="scene">
-										<li class="layer" data-depth="0" style="position: relative; display: block; top: 0; left: 0;">
+									<ul class="scene">
+										<li class="layer" data-depth="0.3" style="position: relative; display: block; top: 0; left: 0;">
 											<div class="layer-item" style="background-image: url(img/Fashion_0006_0_background.png); width: 1050px; height: 575px; background-size: 1050px 575px; top: 0px; left: 0px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Fashion_0005_1_middle.png); width: 794px; height: 482px; background-size: 794px 482px; top: 0px; left: 123.5px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Fashion_0004_1_middle_highlighted.png); width: 818.5px; height: 496.5px; background-size: 818.5px 496.5px; top: 0px; left: 112px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
+										
+											<div id="Fashion_0005_1_middle" class="layer-item" style="background-image: url(img/Fashion_0005_1_middle.png); width: 794px; height: 482px; background-size: 794px 482px; top: 0px; left: 123.5px;" data-title="<h3>Alexander McQueen: Savage Beauty</h3>The Savage Beauty exhibit at the Victoria & Albert museum was a favorite for many of us. With a string of rooms full of overwhelmingly beautiful dresses, hats, shoes, and other garments, Savage Beauty intended to tell the impressive, tragic, fantastical story of fashion designer and pioneer, Alexander McQueen. A journey into each of his collections, the exhibit was as jarring as it was stunning. <br><br>The works of McQueen were nothing short of amazing, combing terrific displays of imagination with painstaking artistry. Each dress came across whimsical, yet deeply purposeful. McQueen was not one to be outdone, and the exhibit’s curators showed great mindfulness in presenting his work in compelling, innovative ways without compromising its original brilliance."></div>
+										
+											<div id="Fashion_0005_1_middle_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Fashion_0004_1_middle_highlighted.png); width: 818.5px; height: 496.5px; background-size: 818.5px 496.5px; top: 0px; left: 112px;"></div>
+										
 											<div class="layer-item" style="background-image: url(img/Fashion_0003_2_side.png); width: 1050px; height: 534.5px; background-size: 1050px 534.5px; top: 0px; left: 0px;"></div>
 										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Fashion_0002_3_burberry.png); width: 285px; height: 224px; background-size: 285px 224px; top: 340.5px; left: 250px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
-											<div class="layer-item" style="background-image: url(img/Fashion_0001_3_burberry_highlighted.png); width: 339.5px; height: 262.5px; background-size: 339.5px 262.5px; top: 312.5px; left: 223px;"></div>
-										</li>
-										<li class="layer" data-depth="0" style="position: absolute; display: block; top: 0; left: 0;">
+										<li class="layer" data-depth="0.2" style="position: absolute; display: block; top: 0; left: 0;">
+											<div id="Fashion_0002_3_burberry" class="layer-item" style="background-image: url(img/Fashion_0002_3_burberry.png); width: 285px; height: 224px; background-size: 285px 224px; top: 340.5px; left: 250px;" data-title="<h3>Burberry</h3>When many of us thought of London fashion, Burberry’s famous tartan pattern came to mind — perhaps not the name, but this crisscross of red, white, and navy lines atop a beige backdrop is undoubtedly iconic. That is why we were very lucky to get to see two faces of the Burberry brand.<br><br>First, we received a private tour of Burberry’s flagship store on the famed Regent Street. The organization of the store expertly balanced Burberry's identity as a long-standing British luxury brand and a fashion company operating at the forefront of couture and high fashion.<br><br>We then traveled across town to explore the Burberry offices and workspace, getting a unique view at their workflow that transforms sketch ideas into fully modeled, high quality garments in the course of a day."></div>
+										
+											<div id="Fashion_0002_3_burberry_highlighted" class="layer-item layer-item-highlighted" style="background-image: url(img/Fashion_0001_3_burberry_highlighted.png); width: 339.5px; height: 262.5px; background-size: 339.5px 262.5px; top: 312.5px; left: 223px;"></div>
+										
 											<div class="layer-item" style="background-image: url(img/Fashion_0000_3_dresserthing.png); width: 727px; height: 313.5px; background-size: 727px 313.5px; top: 247.5px; left: 133px;"></div>
 										</li>
 									</ul>

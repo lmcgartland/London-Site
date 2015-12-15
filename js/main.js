@@ -1,23 +1,4 @@
 jQuery(document).ready(function(){
-	/*$('#scene').parallax({
-		relativeInput: true,
-		clipRelativeInput: true,
-		invertY: true
-	});*/
-
-$("#display-1").click(function(){
-	$("#ov-1").animate({"margin-top": "0vh"});
-	$("#oc-1").animate({"visibility": "visible"});
-});
-$("#display-2").click(function(){
-	$("#ov-1").animate({"margin-top": "0vh"});
-	$("#oc-2").animate({"visibility": "visible"});
-});
-$("#ov-1").click(function(){
-	$("#ov-1").animate({"margin-top": "100vh"});
-	$(".overlay-content").animate({"visibility": "hidden"});
-});
-
 (function() {
 	var storefront = new Storefront($('.storefront'));
 })();
@@ -35,11 +16,158 @@ function Storefront(el) {
 	this.currentDisplayIndex = 0;
 	this.lastDisplayIndex = 0;
 	this._init();
-
+	$(".prev").css("opacity","0").css("visibility","hidden");
 
 
 };
 
+$(window).load(function(){
+	TweenMax.fromTo(".welcome-c-1", 0.75, {
+		autoAlpha:1,
+		x: -1000,
+		y: -500,
+		rotation: -50,
+		ease: Cubic.easeOut
+	}, {
+		autoAlpha:1,
+		x: -350,
+		y: -230,
+		rotation: -10,
+		ease: Cubic.easeOut,
+		delay: 0.5,
+	});
+
+		TweenMax.fromTo(".welcome-c-2", 0.9, {
+		autoAlpha:1,
+		x: 1000,
+		y: -500,
+		rotation: 30,
+		ease: Cubic.easeOut
+	}, {
+		autoAlpha:1,
+		x: -100,
+		y: -50,
+		rotation: 5,
+		ease: Cubic.easeOut,
+		delay: 0.7,
+	});
+
+});
+
+	$(".welcome-card").click(function() {
+	TweenMax.to(".welcome-c-1", 1.1, {
+		autoAlpha:0,
+		y: 500,
+		rotation: -50,
+		ease: Cubic.easeInOut,
+				delay: 0.2
+
+	});
+
+		TweenMax.to(".welcome-c-2", 0.75, {
+		autoAlpha:0,
+		x: -100,
+		y:700,
+		rotation: 30,
+		ease: Cubic.easeInOut
+	});
+
+		TweenMax.fromTo(".welcome-overlay", 0.9, {
+		autoAlpha:1,
+		ease: Cubic.easeInOut
+	}, {
+		autoAlpha:0,
+		ease: Cubic.easeInOut,
+		delay: 1.1
+	});
+
+	});
+
+
+
+$(window).on('resize', function(){
+	scaleWin();
+});
+
+$(".prev").click(function(){
+
+	var tl = new TimelineLite();
+
+	tl.to(this, 0.1, {
+		x: -25,
+		ease: Elastic.easeInOut
+	}).to(this, 0.1, {
+		x: 10,
+		ease: Elastic.easeInOut,
+	}).to(this, 0.1, {
+		x: 0,
+		ease: Elastic.easeInOut,
+	});
+
+
+});
+
+$(".next").click(function(){
+
+	var tl = new TimelineLite();
+
+	tl.to(this, 0.1, {
+		x: 25,
+		ease: Elastic.easeInOut
+	}).to(this, 0.1, {
+		x: -10,
+		ease: Elastic.easeInOut,
+	}).to(this, 0.1, {
+		x: 0,
+		ease: Elastic.easeInOut,
+	});
+
+
+});
+
+
+function scaleWin() {
+
+	      var win = $(window); //this = window
+
+      if (win.width() > 1500) {
+      }
+      else if (win.width() < 750)  {
+      }
+      else {
+      $(".storefront-wrapper").css("transform","translateX(-50%) translateY(-48%) scale("+(win.width()/($(".storefront-wrapper").width()+800))+")");
+      }
+}
+
+
+
+
+
+
+$(".layer-item").mouseenter( function(){
+	var title = $(this).attr('data-title');
+
+	$(".tooltip").html(title);
+
+	TweenMax.to(".tooltip", 1, {
+		autoAlpha:1,
+		scale: 1,
+		ease: Elastic.easeOut
+	});
+
+} ).mouseleave( function(){
+	TweenMax.to(".tooltip", 0.2, {
+		autoAlpha:0,
+		scale: 0,
+		ease: Cubic.easeIn
+	});
+
+} ).mousemove(function(e) {
+	var mousex = e.pageX + 10; //Get X coordinates
+        var mousey = e.pageY + 10; //Get Y coordinates
+        $('.tooltip')
+        .css({ top: mousey, left: mousex })
+});
 
 
 
@@ -53,12 +181,39 @@ Storefront.prototype._init = function() {
 
 	// toggleZoom();
 	advance(); // initial advance for setup
+	scaleWin();
+
+	$('#scene').parallax({
+		relativeInput: true,
+		clipRelativeInput: true,
+		invertY: true
+	});
+
+	$("#scene").on("mouseover", function() {
+		console.log("Scene moused over");
+	})
+
+	$(".layer-item-highlighted").hide();
+
+	$(".layer-item[data-title]").css("pointer-events", "auto");
+
+	$(".layer-item[data-title]").hover(function() {
+		thisID = "#" + $(this).attr("id") + "_highlighted";
+		console.log("Item with overlay-content attr moused over. ID: " + thisID);
+		$(thisID).show();
+	}, function() {
+		thisID = "#" + $(this).attr("id") + "_highlighted";
+		console.log("Item with overlay-content attr moused out. ID: " + thisID);
+		$(thisID).hide();
+	});
+
 
 	/* Paging controls */
 
 	$( "a.next" ).click(function() {
 		goNext();
 	});
+
 
 	$( "a.prev" ).click(function() {
 		goPrev();
@@ -89,12 +244,19 @@ Storefront.prototype._init = function() {
 	function goPrev() {
 		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
 		if(storefront.currentDisplayIndex > 0) storefront.currentDisplayIndex--;
+		
+
+		// if(storefront.currentDisplayIndex+1 > 0) $(".prev").addClass("disabled");
+		// else $(".prev").removeClass("disabled");
 		advance();
 	}	
 
 	function goNext() {
 		storefront.lastDisplayIndex = storefront.currentDisplayIndex;
 		if(storefront.currentDisplayIndex < storefront.displays.length-1) storefront.currentDisplayIndex++;
+		
+		// if(storefront.currentDisplayIndex+1 <0) $(".next").addClass("disabled");
+		// else $(".next").removeClass("disabled");
 		advance();
 	}	
 
@@ -104,10 +266,32 @@ Storefront.prototype._init = function() {
 		$("g.indicator-group circle:nth-child("+(storefront.lastDisplayIndex+1)+")").attr("class", "indicator");
 		$("g.indicator-group circle:nth-child("+(storefront.currentDisplayIndex+1)+")").attr("class", "indicator active");
 
+		/* setup parallax */
+		$(storefront.displays[storefront.lastDisplayIndex]).find("ul").parallax().parallax('disable');
+		$(storefront.displays[storefront.currentDisplayIndex]).find("ul").parallax({
+			relativeInput: true,
+			clipRelativeInput: true,
+			invertY: true
+		});
+		$(storefront.displays[storefront.currentDisplayIndex]).find("ul").parallax().parallax('enable');
+
+		var displayTitle = $(storefront.displays[storefront.currentDisplayIndex]).attr("data-title");
+		var displayCreds = $(storefront.displays[storefront.currentDisplayIndex]).attr("creds");
+
+		$("h2.display-title").html(displayTitle);
+		$("span.display-creds").html(displayCreds);
+
+
 		TweenMax.to(".storefront", 0.4, {
 			x: -$(storefront.displays[storefront.currentDisplayIndex]).width()*storefront.currentDisplayIndex, 
 			ease: Quad.easeInOut
 		});
+
+		if(storefront.currentDisplayIndex == 0) $(".prev").css("opacity","0").css("visibility","hidden");
+		if(storefront.currentDisplayIndex > 0) $(".prev").css("visibility","visible").css("opacity","1");
+		if(storefront.currentDisplayIndex == storefront.displays.length-1) $(".next").css("opacity","0").css("visibility","hidden");
+		if(storefront.currentDisplayIndex < storefront.displays.length-1) $(".next").css("visibility","visible").css("opacity","1");
+
 	}
 
 	function toggleZoom() {
